@@ -1,7 +1,7 @@
 'use client';
 
 // src/components/sections/HeroSection.tsx
-import { m } from 'motion/react-m';
+import * as m from 'motion/react-m';
 import { hero } from '@/content/homepage';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
