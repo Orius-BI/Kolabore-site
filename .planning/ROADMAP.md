@@ -33,7 +33,7 @@
 **Plans**: 5 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Initialize Next.js project, configure static export, install next-image-export-optimizer
+- [x] 01-01-PLAN.md — Initialize Next.js project, configure static export, install next-image-export-optimizer
 - [ ] 01-02-PLAN.md — Configure Tailwind v4 design tokens in globals.css
 - [ ] 01-03-PLAN.md — Root layout fonts + lang + metadataBase + public/.htaccess
 - [ ] 01-04-PLAN.md — Layout components: Header, Footer, Container, Section
@@ -173,7 +173,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/5 | Planned | - |
+| 1. Foundation | 1/5 | In Progress|  |
 | 2. Homepage | 0/5 | Not started | - |
 | 3. Inner Pages | 0/4 | Not started | - |
 | 4. Executivos | 0/4 | Not started | - |
