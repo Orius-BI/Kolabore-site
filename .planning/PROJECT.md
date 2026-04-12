@@ -12,7 +12,15 @@ O visitante deve entender em segundos quem é a Kolabore, por que confiar, e com
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Next.js 16 static export scaffold (`output: 'export'`, `trailingSlash: true`) — Phase 1
+- ✓ Tailwind CSS v4 design system com tokens da marca Kolabore (#0d0d0d, #f5f5f4, #b8933f) — Phase 1
+- ✓ Fontes Cormorant Garamond + Inter via `next/font/google` (sem CDN externo) — Phase 1
+- ✓ `next-image-export-optimizer` configurado como loader de imagens — Phase 1
+- ✓ `public/.htaccess` com HTTPS redirect + SPA fallback para Hostinger — Phase 1
+- ✓ Root layout com `lang="pt-BR"`, `metadataBase`, `AnimationProvider` — Phase 1
+- ✓ Componentes de layout: Header (scroll-aware), Footer, Container, Section — Phase 1
+- ✓ 6 rotas placeholder (`/`, `/kolabore`, `/expertise`, `/engajamento`, `/executivos`, `/contato`) — Phase 1
+- ✓ Camada de dados tipada: `team.ts`, `areas.ts` (8 áreas), `formats.ts` (8 formatos) — Phase 1
 
 ### Active
 
@@ -91,4 +99,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-11 after initialization*
+*Last updated: 2026-04-12 after Phase 1 (Foundation) complete*
