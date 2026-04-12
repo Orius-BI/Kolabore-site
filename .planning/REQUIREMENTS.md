@@ -8,7 +8,7 @@
 ### Foundation
 
 - [x] **FOUND-01**: Projeto Next.js 15 com TypeScript inicializado com `output: 'export'` e `trailingSlash: true`
-- [ ] **FOUND-02**: Tailwind CSS v4 configurado com tokens de design em `@theme` (cores, tipografia, espaçamento)
+- [x] **FOUND-02**: Tailwind CSS v4 configurado com tokens de design em `@theme` (cores, tipografia, espaçamento)
 - [ ] **FOUND-03**: Fontes `Cormorant Garamond` (headings) + `Inter` (body) via `next/font/google` — sem `<link>` para Google Fonts
 - [x] **FOUND-04**: `next-image-export-optimizer` configurado antes de qualquer uso de `<Image>`
 - [ ] **FOUND-05**: `public/.htaccess` com rewrite SPA fallback + redirect HTTPS (copiado para `out/` no build)
