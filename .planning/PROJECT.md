@@ -21,10 +21,12 @@ O visitante deve entender em segundos quem é a Kolabore, por que confiar, e com
 - ✓ Componentes de layout: Header (scroll-aware), Footer, Container, Section — Phase 1
 - ✓ 6 rotas placeholder (`/`, `/kolabore`, `/expertise`, `/engajamento`, `/executivos`, `/contato`) — Phase 1
 - ✓ Camada de dados tipada: `team.ts`, `areas.ts` (8 áreas), `formats.ts` (8 formatos) — Phase 1
+- ✓ Homepage com 8 seções em ordem de jornada comercial (hero → público → desafios → formatos → senioridade → áreas → contato) — Phase 2
+- ✓ Primitivos UI: Button (3 variantes), SectionHeading — Phase 2
+- ✓ ContactSection com Formspree, honeypot e confirmação inline — aguarda `NEXT_PUBLIC_FORMSPREE_ID` — Phase 2
 
 ### Active
 
-- [ ] Homepage com hero, seções de público-alvo, desafios, formatos de atuação, senioridade e time
 - [ ] Página Kolabore — quem somos, visão institucional, proposta de valor, posicionamento
 - [ ] Página Expertise — o que resolvemos, áreas de atuação, desafios mais comuns
 - [ ] Página Engajamento — como atuamos, formatos de projeto, arranjos customizados
@@ -99,4 +101,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-12 after Phase 1 (Foundation) complete*
+*Last updated: 2026-04-12 after Phase 2 (Homepage) complete*
