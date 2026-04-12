@@ -1,7 +1,7 @@
 'use client';
 
 // src/components/sections/AudienceSection.tsx
-import { m } from 'motion/react-m';
+import * as m from 'motion/react-m';
 import { audience } from '@/content/homepage';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
