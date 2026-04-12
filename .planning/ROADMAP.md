@@ -36,7 +36,7 @@ Plans:
 - [x] 01-01-PLAN.md — Initialize Next.js project, configure static export, install next-image-export-optimizer
 - [x] 01-02-PLAN.md — Configure Tailwind v4 design tokens in globals.css
 - [x] 01-03-PLAN.md — Root layout fonts + lang + metadataBase + public/.htaccess
-- [ ] 01-04-PLAN.md — Layout components: Header, Footer, Container, Section
+- [x] 01-04-PLAN.md — Layout components: Header, Footer, Container, Section
 - [ ] 01-05-PLAN.md — Route scaffold (all 6 pages) + typed data files (team, areas, formats)
 
 **Notes**:
