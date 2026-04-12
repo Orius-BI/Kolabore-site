@@ -30,19 +30,20 @@
   4. `out/.htaccess` is present with SPA fallback and HTTPS redirect rules
   5. Header scroll behavior (transparent → solid) works in browser; Footer renders on all pages
 
-**Plans**:
-  - **Plan 1.1** — Initialize Next.js 15 project with TypeScript, configure `next.config.ts` with `output: 'export'`, `trailingSlash: true`, and `next-image-export-optimizer` integration. Verify `npm run build` produces `out/`. *(blocks all others)*
-  - **Plan 1.2** — Configure Tailwind CSS v4 with `@theme` design tokens: colors (`#0d0d0d`, `#f5f5f4`, `#b8933f`), fonts (Cormorant Garamond headings + Inter body via `next/font/google`), spacing scale. *(parallel with 1.3 after 1.1)*
-  - **Plan 1.3** — Create `public/.htaccess` with SPA fallback + HTTPS redirect. Verify it copies to `out/` during build. Set `metadataBase` and `lang="pt-BR"` in root layout. *(parallel with 1.2 after 1.1)*
-  - **Plan 1.4** — Build `Header` (fixed, transparent-to-solid on scroll), `Footer`, `Container`, and `Section` layout components. Wire into root layout. *(after 1.2)*
-  - **Plan 1.5** — Scaffold all 6 route directories with placeholder `page.tsx` files. Create typed data files in `src/data/` (team.ts, areas.ts, formats.ts) with TypeScript constants matching PRD content. *(parallel with 1.4 after 1.2)*
+**Plans**: 5 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Initialize Next.js project, configure static export, install next-image-export-optimizer
+- [ ] 01-02-PLAN.md — Configure Tailwind v4 design tokens in globals.css
+- [ ] 01-03-PLAN.md — Root layout fonts + lang + metadataBase + public/.htaccess
+- [ ] 01-04-PLAN.md — Layout components: Header, Footer, Container, Section
+- [ ] 01-05-PLAN.md — Route scaffold (all 6 pages) + typed data files (team, areas, formats)
 
 **Notes**:
   - `next-image-export-optimizer` MUST be configured in Plan 1.1 before any `<Image>` component is written anywhere in the project. This is the highest-risk silent failure for static export.
   - Fonts must use `next/font/google` exclusively — never `<link>` to Google Fonts. Self-hosting via build time eliminates FOUT and the external network request.
   - Confirm deployment target is domain root (not subdirectory) before setting `basePath`.
 
-**Plans**: TBD
 **UI hint**: yes
 
 ---
@@ -172,7 +173,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/5 | Not started | - |
+| 1. Foundation | 0/5 | Planned | - |
 | 2. Homepage | 0/5 | Not started | - |
 | 3. Inner Pages | 0/4 | Not started | - |
 | 4. Executivos | 0/4 | Not started | - |
