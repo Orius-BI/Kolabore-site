@@ -15,8 +15,8 @@
 - [x] **FOUND-06**: `metadataBase` configurado no root layout para resolução de URLs de OG image
 - [x] **FOUND-07**: `lang="pt-BR"` no `<html>` do root layout
 - [x] **FOUND-08**: Componentes de layout: `Header` (fixo, transparente-para-sólido no scroll), `Footer`, `Container`, `Section`
-- [ ] **FOUND-09**: Rotas vazias criadas para todas as 6 páginas: `/`, `/kolabore`, `/expertise`, `/engajamento`, `/executivos`, `/contato`
-- [ ] **FOUND-10**: Estrutura de dados tipada em `src/data/` (team.ts, areas.ts, formats.ts) — TypeScript constants sem CMS
+- [x] **FOUND-09**: Rotas vazias criadas para todas as 6 páginas: `/`, `/kolabore`, `/expertise`, `/engajamento`, `/executivos`, `/contato`
+- [x] **FOUND-10**: Estrutura de dados tipada em `src/data/` (team.ts, areas.ts, formats.ts) — TypeScript constants sem CMS
 
 ### Homepage
 

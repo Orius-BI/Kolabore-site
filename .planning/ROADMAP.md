@@ -37,7 +37,7 @@ Plans:
 - [x] 01-02-PLAN.md — Configure Tailwind v4 design tokens in globals.css
 - [x] 01-03-PLAN.md — Root layout fonts + lang + metadataBase + public/.htaccess
 - [x] 01-04-PLAN.md — Layout components: Header, Footer, Container, Section
-- [ ] 01-05-PLAN.md — Route scaffold (all 6 pages) + typed data files (team, areas, formats)
+- [x] 01-05-PLAN.md — Route scaffold (all 6 pages) + typed data files (team, areas, formats)
 
 **Notes**:
   - `next-image-export-optimizer` MUST be configured in Plan 1.1 before any `<Image>` component is written anywhere in the project. This is the highest-risk silent failure for static export.
