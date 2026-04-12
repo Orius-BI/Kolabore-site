@@ -8,7 +8,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work
+- [x] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work (completed 2026-04-12)
 - [ ] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order
 - [ ] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage
 - [ ] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade
@@ -173,7 +173,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 2/5 | In Progress|  |
+| 1. Foundation | 2/5 | Complete    | 2026-04-12 |
 | 2. Homepage | 0/5 | Not started | - |
 | 3. Inner Pages | 0/4 | Not started | - |
 | 4. Executivos | 0/4 | Not started | - |
