@@ -9,7 +9,8 @@
 ## Phases
 
 - [x] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work (completed 2026-04-12)
-- [x] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order (completed 2026-04-12)
+- [x] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order
+ (completed 2026-04-12)
 - [ ] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage
 - [ ] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade
 - [ ] **Phase 5: Contact, SEO & Deploy** — Site completo, otimizado e deployado no Hostinger com todos os requisitos validados
@@ -97,7 +98,14 @@ Plans:
   - **Plan 3.3** — Build `/expertise` page: areas of focus expanded from homepage cards, critical challenge topics per area, framing as executive problems not service catalog. Uses `src/data/areas.ts`. *(parallel with 3.2)*
   - **Plan 3.4** — Build `/engajamento` page: engagement formats expanded from homepage, custom arrangement description, how the working relationship with client looks, project lifecycle. Uses `src/data/formats.ts`. Secondary CTA wired on each section. *(after 3.2 and 3.3)*
 
-**Plans**: TBD
+**Plans**: 4 plans
+
+Plans:
+- [ ] 03-01-PLAN.md � Write all inner-page copy as TypeScript constants in src/content/inner-pages.ts (substitution-tested)
+- [ ] 03-02-PLAN.md � Build /kolabore page: vision, value proposition, positioning, seniority sections
+- [ ] 03-03-PLAN.md � Build /expertise page: 8 areas expanded with challenge framing and sub-problems
+- [ ] 03-04-PLAN.md � Build /engajamento page: 8 formats expanded, custom arrangements, working relationship
+
 **UI hint**: yes
 
 ---
