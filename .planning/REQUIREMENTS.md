@@ -9,11 +9,11 @@
 
 - [x] **FOUND-01**: Projeto Next.js 15 com TypeScript inicializado com `output: 'export'` e `trailingSlash: true`
 - [ ] **FOUND-02**: Tailwind CSS v4 configurado com tokens de design em `@theme` (cores, tipografia, espaçamento)
-- [ ] **FOUND-03**: Fontes `Cormorant Garamond` (headings) + `Inter` (body) via `next/font/google` — sem `<link>` para Google Fonts
+- [x] **FOUND-03**: Fontes `Cormorant Garamond` (headings) + `Inter` (body) via `next/font/google` — sem `<link>` para Google Fonts
 - [x] **FOUND-04**: `next-image-export-optimizer` configurado antes de qualquer uso de `<Image>`
-- [ ] **FOUND-05**: `public/.htaccess` com rewrite SPA fallback + redirect HTTPS (copiado para `out/` no build)
-- [ ] **FOUND-06**: `metadataBase` configurado no root layout para resolução de URLs de OG image
-- [ ] **FOUND-07**: `lang="pt-BR"` no `<html>` do root layout
+- [x] **FOUND-05**: `public/.htaccess` com rewrite SPA fallback + redirect HTTPS (copiado para `out/` no build)
+- [x] **FOUND-06**: `metadataBase` configurado no root layout para resolução de URLs de OG image
+- [x] **FOUND-07**: `lang="pt-BR"` no `<html>` do root layout
 - [ ] **FOUND-08**: Componentes de layout: `Header` (fixo, transparente-para-sólido no scroll), `Footer`, `Container`, `Section`
 - [ ] **FOUND-09**: Rotas vazias criadas para todas as 6 páginas: `/`, `/kolabore`, `/expertise`, `/engajamento`, `/executivos`, `/contato`
 - [ ] **FOUND-10**: Estrutura de dados tipada em `src/data/` (team.ts, areas.ts, formats.ts) — TypeScript constants sem CMS
