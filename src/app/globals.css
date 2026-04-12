@@ -1,26 +1,54 @@
+/* src/app/globals.css */
+/* Tailwind v4 — single import replaces @tailwind base/components/utilities */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ─── Static design tokens ───────────────────────────────────────────────── */
+/* Tailwind emits these as CSS custom properties and generates utility classes */
+@theme {
+  /* Brand colors */
+  --color-ink:        #0d0d0d;    /* near-black — primary bg, body text */
+  --color-carbon:     #1a1a1a;    /* card surfaces */
+  --color-slate:      #2c2c2c;    /* borders, subtle dividers */
+  --color-silver:     #8a8a8a;    /* muted text, eyebrow labels */
+  --color-mist:       #f5f5f4;    /* warm light backgrounds */
+  --color-white:      #ffffff;
+  --color-gold:       #b8933f;    /* accent — CTAs, highlights — use sparingly */
+  --color-gold-hover: #d4ad6b;    /* hover/focus state for gold */
+
+  /* Type scale */
+  --text-display: 3.5rem;         /* hero headline */
+  --text-h1:      2.5rem;
+  --text-h2:      1.875rem;
+  --text-h3:      1.375rem;
+  --text-body:    1rem;
+  --text-small:   0.875rem;
+  --text-label:   0.75rem;
+
+  /* Spacing */
+  --spacing-section:    5rem;     /* py-20 equivalent */
+  --spacing-section-lg: 7rem;     /* py-28 — hero section */
+
+  /* Radius — institutional, not rounded */
+  --radius-card:   0.25rem;
+  --radius-button: 0.125rem;
 }
 
+/* ─── Font tokens — reference next/font CSS variables ───────────────────── */
+/* MUST use @theme inline (not @theme) so Tailwind references the already-    */
+/* present CSS variables from next/font rather than emitting new ones.        */
+/* Variable names here MUST match exactly what is set in src/app/layout.tsx: */
+/*   Inter({ variable: "--font-inter" })                                      */
+/*   Cormorant_Garamond({ variable: "--font-cormorant" })                     */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans:    var(--font-inter);
+  --font-display: var(--font-cormorant);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* ─── Base styles ────────────────────────────────────────────────────────── */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-ink);
+  color: var(--color-mist);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
