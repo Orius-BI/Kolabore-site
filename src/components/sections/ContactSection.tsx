@@ -117,7 +117,7 @@ export function ContactSection() {
             <p className="text-small text-red-400">{contact.errorBody}</p>
           )}
 
-          <Button variant="primary" type="submit" disabled={state.submitting}>
+          <Button variant="primary" type="submit" disabled={state.submitting} className="w-full sm:w-auto">
             {state.submitting ? 'Enviando...' : contact.ctaLabel}
           </Button>
         </form>

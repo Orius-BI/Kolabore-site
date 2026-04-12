@@ -9,7 +9,7 @@
 ## Phases
 
 - [x] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work (completed 2026-04-12)
-- [ ] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order
+- [x] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order (completed 2026-04-12)
 - [ ] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage
 - [ ] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade
 - [ ] **Phase 5: Contact, SEO & Deploy** — Site completo, otimizado e deployado no Hostinger com todos os requisitos validados
@@ -67,7 +67,7 @@ Plans:
 - [x] 02-02-PLAN.md — Build Button + SectionHeading UI primitives, HeroSection, AudienceSection; wire into page.tsx
 - [x] 02-03-PLAN.md — Build ChallengesSection, FormatsSection, SenioritySection; wire into page.tsx
 - [x] 02-04-PLAN.md — Build TeamPreviewSection (Phase 4 gate), AreasSection, ContactSection (Formspree); complete page.tsx
-- [ ] 02-05-PLAN.md — Motion audit (motion/react-m imports), responsive layout passes at 375px and 1440px; build + lint
+- [x] 02-05-PLAN.md — Motion audit (motion/react-m imports), responsive layout passes at 375px and 1440px; build + lint
 
 **Notes**:
   - Commercial journey order is mandatory: hook (hero) → orient (audience + challenges) → build trust (formats + seniority + team) → act (contact). Do not follow PPT chapter order.
@@ -176,7 +176,7 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/5 | Complete    | 2026-04-12 |
-| 2. Homepage | 4/5 | In Progress|  |
+| 2. Homepage | 5/5 | Complete   | 2026-04-12 |
 | 3. Inner Pages | 0/4 | Not started | - |
 | 4. Executivos | 0/4 | Not started | - |
 | 5. Contact, SEO & Deploy | 0/5 | Not started | - |
