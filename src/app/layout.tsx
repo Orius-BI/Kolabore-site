@@ -2,6 +2,8 @@
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import { AnimationProvider } from "@/components/providers/AnimationProvider";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import "@/styles/globals.css";
 
 // CRITICAL: variable names here MUST match var() references in globals.css @theme inline block
@@ -49,7 +51,9 @@ export default function RootLayout({
     >
       <body className="font-sans bg-ink text-mist antialiased">
         <AnimationProvider>
-          {children}
+          <Header />
+          <main>{children}</main>
+          <Footer />
         </AnimationProvider>
       </body>
     </html>
