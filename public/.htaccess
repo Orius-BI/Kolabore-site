@@ -1,0 +1,28 @@
+# public/.htaccess
+# DO NOT place this file in out/ — it gets wiped on every npm run build.
+# next build copies public/ to out/ automatically. Always edit this source file.
+#
+# Requires mod_rewrite enabled on Hostinger (available on all shared plans).
+# Requires free SSL activated in hPanel before the HTTPS redirect has effect.
+
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # 1. Force HTTPS
+    # Note: Activate SSL in Hostinger hPanel before enabling this in production.
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+    # 2. SPA fallback for direct URL access and browser refresh
+    # With trailingSlash: true in next.config.ts, Next.js outputs /route/index.html,
+    # so Apache serves most routes directly as directory indexes.
+    # This rule catches any edge cases not matched by static files.
+    RewriteBase /
+    RewriteRule ^index\.html$ - [L]
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+    RewriteRule . /index.html [L]
+</IfModule>
