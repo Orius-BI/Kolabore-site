@@ -66,7 +66,7 @@ Plans:
 - [x] 02-01-PLAN.md — Write all homepage copy as TypeScript constants in src/content/homepage.ts (substitution-tested)
 - [x] 02-02-PLAN.md — Build Button + SectionHeading UI primitives, HeroSection, AudienceSection; wire into page.tsx
 - [x] 02-03-PLAN.md — Build ChallengesSection, FormatsSection, SenioritySection; wire into page.tsx
-- [ ] 02-04-PLAN.md — Build TeamPreviewSection (Phase 4 gate), AreasSection, ContactSection (Formspree); complete page.tsx
+- [x] 02-04-PLAN.md — Build TeamPreviewSection (Phase 4 gate), AreasSection, ContactSection (Formspree); complete page.tsx
 - [ ] 02-05-PLAN.md — Motion audit (motion/react-m imports), responsive layout passes at 375px and 1440px; build + lint
 
 **Notes**:
@@ -176,7 +176,7 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/5 | Complete    | 2026-04-12 |
-| 2. Homepage | 3/5 | In Progress|  |
+| 2. Homepage | 4/5 | In Progress|  |
 | 3. Inner Pages | 0/4 | Not started | - |
 | 4. Executivos | 0/4 | Not started | - |
 | 5. Contact, SEO & Deploy | 0/5 | Not started | - |

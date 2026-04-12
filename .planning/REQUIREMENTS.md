@@ -26,8 +26,8 @@
 - [x] **HOME-04**: `FormatsSection` — formatos de atuação (consultoria completa, assessments, workshops, mentoring, advisory)
 - [x] **HOME-05**: `SenioritySection` — métricas de senioridade (~35 anos, experiência nacional/internacional, grandes empresas), sem exagero visual
 - [ ] **HOME-06**: `TeamPreviewSection` — preview do time com fotos institucionais, 3-5 especialidades, 1 credencial por executivo
-- [ ] **HOME-07**: `AreasSection` — cards de áreas de atuação: Supply Chain, Operações, Procurement, Governança, Qualidade, Projetos/Transformação, Inovação, Conselho
-- [ ] **HOME-08**: `ContactSection` — formulário de contato via Formspree na homepage, com CTA "Agende uma conversa"
+- [x] **HOME-07**: `AreasSection` — cards de áreas de atuação: Supply Chain, Operações, Procurement, Governança, Qualidade, Projetos/Transformação, Inovação, Conselho
+- [x] **HOME-08**: `ContactSection` — formulário de contato via Formspree na homepage, com CTA "Agende uma conversa"
 
 ### Páginas Internas
 
