@@ -8,7 +8,7 @@
 
 ## Phases
 
-- [x] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work (completed 2026-04-12)
+- [x] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work (completed 2026-04-12)
 - [ ] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order
 - [ ] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage
 - [ ] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade
@@ -60,20 +60,22 @@ Plans:
   4. Page renders without layout breaks on 375px mobile and 1440px desktop
   5. All copy across all 8 sections is free of "consultorês" — no generic phrases that could apply to any consulting firm
 
-**Plans**:
-  - **Plan 2.1** — Write all homepage copy: hero headline + subheadline, audience blocks, challenge questions, format descriptions, seniority proof points, team preview blurbs, area cards, contact CTA. Apply substitution test to every heading. Source from `docs/previa_do_prd.md` and PPT materials. *(should run before or parallel with component work)*
-  - **Plan 2.2** — Build `HeroSection` and `AudienceSection`. Hero: problem-first headline, subheadline, dual CTA ("Converse com a Kolabore" / "Conheça nossa atuação"), design token colors applied. Audience: CEO/diretores/acionistas/conselhos/transformação blocks. *(after Plan 2.1 copy draft; parallel with 2.3)*
-  - **Plan 2.3** — Build `ChallengesSection`, `FormatsSection`, `SenioritySection`. Challenges as executive questions (not service list). Formats as scannable cards. Seniority as metric proof points without visual excess. *(parallel with 2.2)*
-  - **Plan 2.4** — Build `TeamPreviewSection`, `AreasSection`, `ContactSection`. TeamPreview uses `src/data/team.ts`. ContactSection integrates Formspree via `NEXT_PUBLIC_FORMSPREE_ID` with honeypot field, success state, and styled confirmation. AreasSection uses `src/data/areas.ts`. *(after 2.2 and 2.3)*
-  - **Plan 2.5** — Wire Motion `LazyMotion` for scroll-entry fade animations on section entrances. Apply responsive Tailwind layout passes across all 8 sections. Verify mobile (375px) and desktop (1440px). *(after 2.4)*
+**Plans**: 5 plans
+
+Plans:
+- [ ] 02-01-PLAN.md — Write all homepage copy as TypeScript constants in src/content/homepage.ts (substitution-tested)
+- [ ] 02-02-PLAN.md — Build Button + SectionHeading UI primitives, HeroSection, AudienceSection; wire into page.tsx
+- [ ] 02-03-PLAN.md — Build ChallengesSection, FormatsSection, SenioritySection; wire into page.tsx
+- [ ] 02-04-PLAN.md — Build TeamPreviewSection (Phase 4 gate), AreasSection, ContactSection (Formspree); complete page.tsx
+- [ ] 02-05-PLAN.md — Motion audit (motion/react-m imports), responsive layout passes at 375px and 1440px; build + lint
 
 **Notes**:
   - Commercial journey order is mandatory: hook (hero) → orient (audience + challenges) → build trust (formats + seniority + team) → act (contact). Do not follow PPT chapter order.
   - Each section max 3–5 sentences. Homepage is a routing layer, not a content layer — deep content lives in inner pages.
-  - Motion library: use `LazyMotion` + `domAnimation` from Framer Motion to avoid loading the full 160KB bundle. CSS transitions are sufficient for anything that doesn't require JS.
+  - Motion library: use `LazyMotion` + `domAnimation` from motion package to avoid loading the full bundle. Always import `m` from `motion/react-m`.
   - Formspree endpoint stays in `.env.local` as `NEXT_PUBLIC_FORMSPREE_ID`. Add to Hostinger environment at deploy time.
+  - Plan 2.4 is not fully autonomous — includes a human checkpoint to verify contact form structure before Plan 2.5 proceeds.
 
-**Plans**: TBD
 **UI hint**: yes
 
 ---
