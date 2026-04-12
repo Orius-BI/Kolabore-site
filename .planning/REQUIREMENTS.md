@@ -20,8 +20,8 @@
 
 ### Homepage
 
-- [ ] **HOME-01**: `HeroSection` — headline orientada a problema, subheadline, CTA primário "Converse com a Kolabore", CTA secundário "Conheça nossa atuação"
-- [ ] **HOME-02**: `AudienceSection` — blocos de público-alvo: CEOs, diretores, acionistas, conselhos, empresas em transformação
+- [x] **HOME-01**: `HeroSection` — headline orientada a problema, subheadline, CTA primário "Converse com a Kolabore", CTA secundário "Conheça nossa atuação"
+- [x] **HOME-02**: `AudienceSection` — blocos de público-alvo: CEOs, diretores, acionistas, conselhos, empresas em transformação
 - [ ] **HOME-03**: `ChallengesSection` — desafios em formato de perguntas executivas (ex: "Como fortalecer a governança em momentos de mudança?"), sem lista de serviços
 - [ ] **HOME-04**: `FormatsSection` — formatos de atuação (consultoria completa, assessments, workshops, mentoring, advisory)
 - [ ] **HOME-05**: `SenioritySection` — métricas de senioridade (~35 anos, experiência nacional/internacional, grandes empresas), sem exagero visual
@@ -54,9 +54,9 @@
 
 ### Design e Performance
 
-- [ ] **DESIGN-01**: Design premium e sóbrio — near-black `#0d0d0d`, warm mist `#f5f5f4`, accent gold `#b8933f` aplicado com parcimônia
+- [x] **DESIGN-01**: Design premium e sóbrio — near-black `#0d0d0d`, warm mist `#f5f5f4`, accent gold `#b8933f` aplicado com parcimônia
 - [ ] **DESIGN-02**: Site responsivo — mobile e desktop com performance boa
-- [ ] **DESIGN-03**: CTA visível ao longo da navegação (header e seções estratégicas)
+- [x] **DESIGN-03**: CTA visível ao longo da navegação (header e seções estratégicas)
 - [ ] **DESIGN-04**: Animações discretas via Motion com `LazyMotion` — apenas scroll-entry fades, nada decorativo
 - [x] **DESIGN-05**: Todos os textos redigidos pelo Claude: headline, manifesto, desafios, formatos, bios do time — aplicando "substitution test" (texto deve soar único para a Kolabore)
 
