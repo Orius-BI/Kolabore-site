@@ -49,6 +49,29 @@ export default function ExecutivosPage() {
           </div>
         </Container>
       </Section>
+
+      {/* JSON-LD Person schema — one per executive for Google rich results */}
+      {executives.map((exec) => (
+        <script
+          key={`jsonld-${exec.id}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              "name": exec.name,
+              "jobTitle": exec.title,
+              "description": exec.bio,
+              "image": `https://kolabore.com.br${exec.photo}`,
+              "worksFor": {
+                "@type": "Organization",
+                "name": "Kolabore",
+                "url": "https://kolabore.com.br"
+              }
+            })
+          }}
+        />
+      ))}
     </main>
   );
 }
