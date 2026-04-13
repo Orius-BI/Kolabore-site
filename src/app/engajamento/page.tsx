@@ -1,15 +1,19 @@
-// src/app/engajamento/page.tsx
+import { PageHeroSection } from '@/components/sections/engajamento/PageHeroSection';
+import { PhilosophySection } from '@/components/sections/engajamento/PhilosophySection';
+import { FormatsDeepSection } from '@/components/sections/engajamento/FormatsDeepSection';
+import { CustomArrangementsSection } from '@/components/sections/engajamento/CustomArrangementsSection';
+import { WorkingRelationshipSection } from '@/components/sections/engajamento/WorkingRelationshipSection';
+import { EngajamentoCtaClose } from '@/components/sections/engajamento/EngajamentoCtaClose';
+
 export default function EngajamentoPage() {
   return (
-    <main className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <h1 className="font-display text-h1 text-mist">
-          Engajamento — Como atuamos
-        </h1>
-        <p className="text-silver mt-4">
-          Conteúdo da página Engajamento será construído na Fase 3.
-        </p>
-      </div>
+    <main>
+      <PageHeroSection />
+      <PhilosophySection />
+      <FormatsDeepSection />
+      <CustomArrangementsSection />
+      <WorkingRelationshipSection />
+      <EngajamentoCtaClose />
     </main>
   );
 }
