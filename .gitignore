@@ -34,3 +34,7 @@ Thumbs.db
 # TypeScript
 *.tsbuildinfo
 next-env.d.ts
+
+# next-image-export-optimizer generated output (build-time artifact)
+public/images/team/nextImageExportOptimizer/
+public/images/nextImageExportOptimizer/
