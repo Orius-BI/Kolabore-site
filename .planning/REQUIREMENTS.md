@@ -39,7 +39,7 @@
 
 - [x] **EXEC-01**: Página `/executivos` — grid de executivos com foto institucional processada, nome, mini bio, especialidades (tags), 1 credencial forte
 - [x] **EXEC-02**: Hover state nos cards revelando especialidades adicionais
-- [ ] **EXEC-03**: Schema JSON-LD `Person` por executivo para SEO
+- [x] **EXEC-03**: Schema JSON-LD `Person` por executivo para SEO
 
 ### Contato e SEO
 
