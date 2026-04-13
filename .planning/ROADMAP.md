@@ -11,7 +11,7 @@
 - [x] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work (completed 2026-04-12)
 - [x] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order
  (completed 2026-04-12)
-- [ ] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage
+- [x] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage (completed 2026-04-13)
 - [ ] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade
 - [ ] **Phase 5: Contact, SEO & Deploy** — Site completo, otimizado e deployado no Hostinger com todos os requisitos validados
 
@@ -102,9 +102,9 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md � Write all inner-page copy as TypeScript constants in src/content/inner-pages.ts (substitution-tested)
-- [ ] 03-02-PLAN.md � Build /kolabore page: vision, value proposition, positioning, seniority sections
+- [x] 03-02-PLAN.md � Build /kolabore page: vision, value proposition, positioning, seniority sections
 - [x] 03-03-PLAN.md � Build /expertise page: 8 areas expanded with challenge framing and sub-problems
-- [ ] 03-04-PLAN.md � Build /engajamento page: 8 formats expanded, custom arrangements, working relationship
+- [x] 03-04-PLAN.md � Build /engajamento page: 8 formats expanded, custom arrangements, working relationship
 
 **UI hint**: yes
 
@@ -185,7 +185,7 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/5 | Complete    | 2026-04-12 |
 | 2. Homepage | 5/5 | Complete   | 2026-04-12 |
-| 3. Inner Pages | 2/4 | In Progress|  |
+| 3. Inner Pages | 4/4 | Complete   | 2026-04-13 |
 | 4. Executivos | 0/4 | Not started | - |
 | 5. Contact, SEO & Deploy | 0/5 | Not started | - |
 
