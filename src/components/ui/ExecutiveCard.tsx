@@ -21,7 +21,7 @@ export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
     >
-      <div className="group relative bg-carbon border border-slate/20 rounded-[var(--radius-card)] overflow-hidden">
+      <div className="group bg-carbon border border-slate/20 rounded-[var(--radius-card)] overflow-hidden">
         {/* Portrait */}
         <ExportedImage
           src={exec.photo}
@@ -32,40 +32,48 @@ export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
           className="w-full aspect-square object-cover object-top"
         />
 
-        {/* Name + title — always visible above overlay */}
-        <div className="relative z-10 px-5 pt-5 pb-2 bg-carbon">
+        {/* Name + title — always visible */}
+        <div className="px-5 pt-5 pb-3">
           <p className="font-sans font-semibold text-mist text-body">{exec.name}</p>
           <p className="text-small text-silver mt-1">{exec.title}</p>
         </div>
 
-        {/* Static content: tags + credential */}
-        <div className="px-5 pb-5 min-h-[140px]">
-          {visibleTags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-2">
-              {visibleTags.map((tag) => (
-                <span key={tag} className="text-label bg-slate/40 text-silver px-2 py-1 rounded-sm">
-                  {tag}
-                </span>
-              ))}
+        {/* Tags + credential: visible by default, collapses on hover */}
+        <div className="grid grid-rows-[1fr] group-hover:grid-rows-[0fr] transition-[grid-template-rows] duration-300">
+          <div className="overflow-hidden">
+            <div className="px-5 pb-5">
+              {visibleTags.length > 0 && (
+                <div className="flex flex-wrap gap-2">
+                  {visibleTags.map((tag) => (
+                    <span key={tag} className="text-label bg-slate/40 text-silver px-2 py-1 rounded-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
+              <p className="mt-4 text-small text-silver/70 italic border-t border-slate/20 pt-4">
+                {exec.credential}
+              </p>
             </div>
-          )}
-          <p className="mt-4 text-small text-silver/70 italic border-t border-slate/20 pt-4">
-            {exec.credential}
-          </p>
+          </div>
         </div>
 
-        {/* Hover overlay — slides up over tags+credential only, name stays above */}
-        <div className="absolute inset-x-0 bottom-0 h-[140px] bg-carbon p-5 translate-y-full group-hover:translate-y-0 transition-transform duration-300 overflow-y-auto">
-          <p className="text-small text-silver leading-relaxed">{exec.bio}</p>
-          {extraTags.length > 0 && (
-            <div className="flex flex-wrap gap-2 mt-3">
-              {extraTags.map((tag) => (
-                <span key={tag} className="text-label bg-slate/40 text-silver px-2 py-1 rounded-sm">
-                  {tag}
-                </span>
-              ))}
+        {/* Bio: hidden by default, expands on hover */}
+        <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-300">
+          <div className="overflow-hidden">
+            <div className="px-5 pb-5">
+              <p className="text-small text-silver leading-relaxed">{exec.bio}</p>
+              {extraTags.length > 0 && (
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {extraTags.map((tag) => (
+                    <span key={tag} className="text-label bg-slate/40 text-silver px-2 py-1 rounded-sm">
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
-          )}
+          </div>
         </div>
       </div>
     </m.div>
