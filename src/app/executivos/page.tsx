@@ -1,4 +1,5 @@
 // src/app/executivos/page.tsx
+import type { Metadata } from 'next'
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { ExecutivosHeroSection } from '@/components/sections/ExecutivosHeroSection';
@@ -6,6 +7,16 @@ import { ExecutiveCard } from '@/components/ui/ExecutiveCard';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { executives } from '@/data/team';
+
+export const metadata: Metadata = {
+  title: 'Executivos',
+  description: 'Conheça o time da Kolabore: executivos seniores com décadas de atuação em grandes empresas. Supply chain, operações, governança e transformação corporativa.',
+  openGraph: {
+    title: 'Executivos | Kolabore',
+    description: 'Conheça o time da Kolabore: executivos seniores com décadas de atuação em grandes empresas. Supply chain, operações, governança e transformação corporativa.',
+    url: 'https://kolabore.com.br/executivos/',
+  },
+}
 
 export default function ExecutivosPage() {
   return (
