@@ -43,7 +43,7 @@
 
 ### Contato e SEO
 
-- [ ] **CONT-01**: Página `/contato` — formulário Formspree com campos essenciais, e-mail, telefone, CTA executivo
+- [x] **CONT-01**: Página `/contato` — formulário Formspree com campos essenciais, e-mail, telefone, CTA executivo
 - [ ] **CONT-02**: `title` e `meta description` únicos por página (todas as 6 páginas)
 - [ ] **CONT-03**: Open Graph tags em todas as páginas (OG image estática 1200x630px)
 - [ ] **CONT-04**: `sitemap.xml` e `robots.txt` gerados no build

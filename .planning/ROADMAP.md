@@ -162,7 +162,7 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Build /contato page: hero, ContactSection (Formspree form reused), contact details (email + phone), metadata export (CONT-01)
+- [x] 05-01-PLAN.md — Build /contato page: hero, ContactSection (Formspree form reused), contact details (email + phone), metadata export (CONT-01)
 - [ ] 05-02-PLAN.md — SEO metadata on all 6 pages (unique title + description + OG), static OG image 1200x630 in app/, Organization JSON-LD on homepage, heading hierarchy audit (CONT-02, CONT-03, CONT-05, CONT-06)
 - [ ] 05-03-PLAN.md — Generate sitemap.xml and robots.txt via native Next.js file conventions with force-static fix (CONT-04)
 - [ ] 05-04-PLAN.md — Lighthouse mobile audit on homepage; fix CLS from unsized images; verify score ≥ 90 (human checkpoint)
@@ -189,7 +189,7 @@ Plans:
 | 2. Homepage | 5/5 | Complete   | 2026-04-12 |
 | 3. Inner Pages | 4/4 | Complete   | 2026-04-13 |
 | 4. Executivos | 4/4 | Complete   | 2026-04-13 |
-| 5. Contact, SEO & Deploy | 0/5 | Not started | - |
+| 5. Contact, SEO & Deploy | 1/5 | In Progress|  |
 
 ---
 
