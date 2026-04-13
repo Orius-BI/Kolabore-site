@@ -12,7 +12,7 @@
 - [x] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order
  (completed 2026-04-12)
 - [x] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage (completed 2026-04-13)
-- [x] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade (completed 2026-04-13)
+- [x] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade (completed 2026-04-13)
 - [ ] **Phase 5: Contact, SEO & Deploy** — Site completo, otimizado e deployado no Hostinger com todos os requisitos validados
 
 ---
@@ -159,12 +159,14 @@ Plans:
   4. OG image renders correctly when the homepage URL is pasted into LinkedIn's Post Inspector
   5. `sitemap.xml` and `robots.txt` are accessible at the domain root and `sitemap.xml` lists all 6 URLs
 
-**Plans**:
-  - **Plan 5.1** — Build `/contato` page: Formspree form with all fields (name, company, role, message), honeypot, styled success state, e-mail and phone display, executive CTA. Reuses form component from homepage `ContactSection`. *(parallel with 5.2)*
-  - **Plan 5.2** — Write and apply SEO metadata: unique `title` (50–60 chars) and `meta description` (150–160 chars) per page using `generateMetadata()`. Add OG tags (`og:title`, `og:description`, `og:image`) to all 6 pages. Create static 1200x630px OG image committed to `public/og-image.jpg`. Add `Organization` JSON-LD schema to homepage. Verify `H1/H2/H3` heading hierarchy on all pages. *(parallel with 5.1)*
-  - **Plan 5.3** — Generate `sitemap.xml` and `robots.txt` as part of the static build output. Verify both are present in `out/` after `npm run build`. *(after 5.1 and 5.2; parallel with 5.4)*
-  - **Plan 5.4** — Run Lighthouse audit on homepage (mobile). Address any score below 90: image optimization, font loading, JS bundle size, CLS. *(parallel with 5.3)*
-  - **Plan 5.5** — Deploy to Hostinger: upload `out/` contents to `public_html/` via FTP or file manager. Execute pre-launch checklist (see below). *(after 5.3 and 5.4)*
+**Plans**: 5 plans
+
+Plans:
+- [ ] 05-01-PLAN.md — Build /contato page: hero, ContactSection (Formspree form reused), contact details (email + phone), metadata export (CONT-01)
+- [ ] 05-02-PLAN.md — SEO metadata on all 6 pages (unique title + description + OG), static OG image 1200x630 in app/, Organization JSON-LD on homepage, heading hierarchy audit (CONT-02, CONT-03, CONT-05, CONT-06)
+- [ ] 05-03-PLAN.md — Generate sitemap.xml and robots.txt via native Next.js file conventions with force-static fix (CONT-04)
+- [ ] 05-04-PLAN.md — Lighthouse mobile audit on homepage; fix CLS from unsized images; verify score ≥ 90 (human checkpoint)
+- [ ] 05-05-PLAN.md — Deploy to Hostinger: set FORMSPREE_ID, final build, FTP upload, pre-launch checklist (CONT-07, CONT-08)
 
 **Pre-Launch Checklist** (all items must pass before marking Phase 5 complete):
   - [ ] Hard-refresh test: visit each of the 6 routes directly in the browser (paste URL, hit Enter) — none return 404
@@ -176,8 +178,6 @@ Plans:
   - [ ] All 6 page titles are unique (check browser tab on each page)
   - [ ] No `console.error` in browser DevTools on any page
   - [ ] Mobile layout tested at 375px on a real device or DevTools emulation
-
-**Plans**: TBD
 
 ---
 
