@@ -6,13 +6,12 @@ import { teamPreview } from '@/content/homepage';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { Button } from '@/components/ui/Button';
 
 export function TeamPreviewSection() {
   // Phase 4 gate: do NOT render with empty team data
   // An empty section destroys credibility faster than no section
   if (executives.length === 0) return null;
-
-  const preview = executives.slice(0, 3);
 
   return (
     <Section id="time" className="bg-ink">
@@ -23,8 +22,8 @@ export function TeamPreviewSection() {
           align="left"
           light={true}
         />
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {preview.map((exec) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          {executives.map((exec) => (
             <div key={exec.id} className="bg-carbon border border-slate/20 rounded-[var(--radius-card)] overflow-hidden">
               <ExportedImage
                 src={exec.photo}
@@ -33,18 +32,21 @@ export function TeamPreviewSection() {
                 height={400}
                 className="w-full aspect-square object-cover object-top rounded-t-[var(--radius-card)]"
               />
-              <div className="p-6">
-                <p className="font-sans font-semibold text-mist text-body">{exec.name}</p>
-                <p className="text-small text-silver mt-1">{exec.title}</p>
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {exec.specialties.slice(0, 3).map((s) => (
-                    <span key={s} className="text-label bg-slate/40 text-silver px-2 py-1 rounded-sm">{s}</span>
+              <div className="p-3">
+                <p className="font-sans font-semibold text-mist text-small leading-tight">{exec.name}</p>
+                <div className="flex flex-wrap gap-1 mt-2">
+                  {exec.specialties.slice(0, 2).map((s) => (
+                    <span key={s} className="text-label bg-slate/40 text-silver px-1.5 py-0.5 rounded-sm">{s}</span>
                   ))}
                 </div>
-                <p className="mt-4 text-small text-silver/70 italic">{exec.credential}</p>
               </div>
             </div>
           ))}
+        </div>
+        <div className="mt-8 text-center">
+          <Button variant="secondary" href="/executivos">
+            Conheça o time completo
+          </Button>
         </div>
       </Container>
     </Section>
