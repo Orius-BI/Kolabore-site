@@ -1,15 +1,24 @@
 // src/app/kolabore/page.tsx
+import { PageHeroSection } from '@/components/sections/kolabore/PageHeroSection';
+import { VisionSection } from '@/components/sections/kolabore/VisionSection';
+import { ValuePropositionSection } from '@/components/sections/kolabore/ValuePropositionSection';
+import { PositioningSection } from '@/components/sections/kolabore/PositioningSection';
+import { SeniorityDeepSection } from '@/components/sections/kolabore/SeniorityDeepSection';
+
+export const metadata = {
+  title: 'Kolabore — Quem somos',
+  description:
+    'Conheça a Kolabore: uma firma de executivos seniores que atua nos desafios reais de supply chain, operações, procurement e governança.',
+};
+
 export default function KolaborePage() {
   return (
-    <main className="min-h-screen pt-20">
-      <div className="max-w-7xl mx-auto px-6 py-20">
-        <h1 className="font-display text-h1 text-mist">
-          Kolabore — Quem somos
-        </h1>
-        <p className="text-silver mt-4">
-          Conteúdo da página Kolabore será construído na Fase 3.
-        </p>
-      </div>
+    <main>
+      <PageHeroSection />
+      <VisionSection />
+      <ValuePropositionSection />
+      <PositioningSection />
+      <SeniorityDeepSection />
     </main>
   );
 }
