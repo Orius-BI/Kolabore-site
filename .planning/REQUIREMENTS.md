@@ -31,9 +31,9 @@
 
 ### Páginas Internas
 
-- [ ] **PAGE-01**: Página `/kolabore` — quem somos, visão institucional, proposta de valor, posicionamento, senioridade do grupo
-- [ ] **PAGE-02**: Página `/expertise` — o que resolvemos, áreas de atuação expandidas, desafios mais comuns, temas críticos por frente
-- [ ] **PAGE-03**: Página `/engajamento` — como atuamos, formatos de projeto expandidos, arranjos customizados, forma de trabalho com clientes
+- [x] **PAGE-01**: Página `/kolabore` — quem somos, visão institucional, proposta de valor, posicionamento, senioridade do grupo
+- [x] **PAGE-02**: Página `/expertise` — o que resolvemos, áreas de atuação expandidas, desafios mais comuns, temas críticos por frente
+- [x] **PAGE-03**: Página `/engajamento` — como atuamos, formatos de projeto expandidos, arranjos customizados, forma de trabalho com clientes
 
 ### Executivos
 
@@ -90,9 +90,9 @@
 |-------------|-------|--------|
 | FOUND-01 a FOUND-10 | Phase 1 | Pending |
 | HOME-01 a HOME-08 | Phase 2 | Pending |
-| PAGE-01 | Phase 3 | Pending |
-| PAGE-02 | Phase 3 | Pending |
-| PAGE-03 | Phase 3 | Pending |
+| PAGE-01 | Phase 3 | Complete |
+| PAGE-02 | Phase 3 | Complete |
+| PAGE-03 | Phase 3 | Complete |
 | EXEC-01 a EXEC-03 | Phase 4 | Pending |
 | CONT-01 a CONT-08 | Phase 5 | Pending |
 | DESIGN-01 a DESIGN-05 | Phases 1-5 (transversal) | Pending |
