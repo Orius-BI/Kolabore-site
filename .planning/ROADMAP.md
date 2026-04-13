@@ -102,8 +102,8 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md � Write all inner-page copy as TypeScript constants in src/content/inner-pages.ts (substitution-tested)
-- [x] 03-02-PLAN.md � Build /kolabore page: vision, value proposition, positioning, seniority sections
-- [ ] 03-03-PLAN.md � Build /expertise page: 8 areas expanded with challenge framing and sub-problems
+- [ ] 03-02-PLAN.md � Build /kolabore page: vision, value proposition, positioning, seniority sections
+- [x] 03-03-PLAN.md � Build /expertise page: 8 areas expanded with challenge framing and sub-problems
 - [ ] 03-04-PLAN.md � Build /engajamento page: 8 formats expanded, custom arrangements, working relationship
 
 **UI hint**: yes
