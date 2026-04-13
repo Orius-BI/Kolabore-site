@@ -24,6 +24,9 @@ O visitante deve entender em segundos quem é a Kolabore, por que confiar, e com
 - ✓ Homepage com 8 seções em ordem de jornada comercial (hero → público → desafios → formatos → senioridade → áreas → contato) — Phase 2
 - ✓ Primitivos UI: Button (3 variantes), SectionHeading — Phase 2
 - ✓ ContactSection com Formspree, honeypot e confirmação inline — aguarda `NEXT_PUBLIC_FORMSPREE_ID` — Phase 2
+- ✓ /kolabore — 5 seções: hero, visão, proposta de valor, posicionamento, senioridade — Phase 3
+- ✓ /expertise — 8 áreas expandidas com framing de problema executivo, merge `areaDetails[area.id]` — Phase 3
+- ✓ /engajamento — 8 formatos em profundidade, arranjos customizados, 3 CTAs posicionadas — Phase 3
 
 ### Active
 
@@ -101,4 +104,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-12 after Phase 2 (Homepage) complete*
+*Last updated: 2026-04-13 after Phase 3 (Inner Pages) complete*
