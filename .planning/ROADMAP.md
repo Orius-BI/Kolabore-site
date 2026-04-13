@@ -11,7 +11,7 @@
 - [x] **Phase 1: Foundation** — Scaffold Next.js 15 static export with design system and all routes before any content work (completed 2026-04-12)
 - [x] **Phase 2: Homepage** — Full homepage communicating Kolabore's positioning in commercial journey order
  (completed 2026-04-12)
-- [x] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage (completed 2026-04-13)
+- [x] **Phase 3: Inner Pages** — Páginas internas expandindo cada tema introduzido na homepage (completed 2026-04-13)
 - [ ] **Phase 4: Executivos** — Página de executivos com fotos institucionais processadas — principal ativo de credibilidade
 - [ ] **Phase 5: Contact, SEO & Deploy** — Site completo, otimizado e deployado no Hostinger com todos os requisitos validados
 
@@ -101,10 +101,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [x] 03-01-PLAN.md � Write all inner-page copy as TypeScript constants in src/content/inner-pages.ts (substitution-tested)
-- [x] 03-02-PLAN.md � Build /kolabore page: vision, value proposition, positioning, seniority sections
-- [x] 03-03-PLAN.md � Build /expertise page: 8 areas expanded with challenge framing and sub-problems
-- [x] 03-04-PLAN.md � Build /engajamento page: 8 formats expanded, custom arrangements, working relationship
+- [x] 03-01-PLAN.md — Write all inner-page copy as TypeScript constants in src/content/inner-pages.ts (substitution-tested)
+- [x] 03-02-PLAN.md — Build /kolabore page: vision, value proposition, positioning, seniority sections
+- [x] 03-03-PLAN.md — Build /expertise page: 8 areas expanded with challenge framing and sub-problems
+- [x] 03-04-PLAN.md — Build /engajamento page: 8 formats expanded, custom arrangements, working relationship
 
 **UI hint**: yes
 
@@ -116,31 +116,33 @@ Plans:
 
 > **CONTENT GATE — BLOCKING DEPENDENCY**
 >
-> Phase 4 cannot begin until processed institutional portraits are available in `src/assets/team/`.
+> Phase 4 cannot deploy until processed institutional portraits are in `public/images/team/`.
 > Source photos exist in `docs/imagens clientes *` but must be:
-> - Resized to display dimensions (minimum 400x400px for card view, 800x800px for full quality)
+> - Resized to 400x400px square (crop centered on face)
 > - Exported as WebP at 75–80% quality (target <100KB per portrait)
-> - Consistent color treatment applied across all portraits for visual unity
+> - Named in kebab-case by executive name (e.g. carlos-ferreira.webp)
 >
-> Do not begin Plan 4.2 or 4.3 until portraits are processed and placed.
-> A placeholder grid is acceptable for development layout work (Plan 4.1), but the page must not be deployed without real portraits.
+> Plan 4.1 can run before portraits are ready (builds layout with empty array gate).
+> Do not begin Plan 4.3 until portraits are processed (Plan 4.2 complete).
+> Do not deploy the page without real portraits — placeholders contradict the trust goal.
 
 **Requirements**: EXEC-01, EXEC-02, EXEC-03
 
 **Success Criteria** (what must be TRUE when this phase completes):
   1. Page loads with real institutional portraits — no placeholders, silhouettes, or initials-in-circles
   2. Each executive card displays name, specialty tags (3–5), and one anchor credential
-  3. Hover state on each card reveals additional information (additional specialties or credential detail) without layout shift
+  3. Hover state on each card reveals additional information (bio + extra specialties) without layout shift
   4. JSON-LD `Person` schema for each executive validates cleanly in Google's Rich Results Test
   5. Executivos page loads in under 3 seconds on a mid-tier mobile device (portraits are WebP, lazy-loaded below the fold)
 
-**Plans**:
-  - **Plan 4.1** — Build the `/executivos` page layout: grid structure, card component shell (name, tags, credential, hover state), responsive layout for 2-col mobile / 3-col desktop. Use placeholder data from `src/data/team.ts`. *(can begin before portraits are ready)*
-  - **Plan 4.2** — Process portraits from `docs/imagens clientes *`: resize, WebP export, color-grade for consistency. Place in `src/assets/team/`. *(CONTENT GATE — required before 4.3)*
-  - **Plan 4.3** — Wire real portrait images into `src/data/team.ts`, populate full team data (name, bio, specialty tags, credentials). Replace placeholder data with real content. Verify `next-image-export-optimizer` produces WebP variants in `out/`. *(after 4.2)*
-  - **Plan 4.4** — Implement `Person` JSON-LD schema per executive. Validate with Google Rich Results Test. *(after 4.3)*
+**Plans**: 4 plans
 
-**Plans**: TBD
+Plans:
+- [ ] 04-01-PLAN.md — Build /executivos page layout: ExecutivosHeroSection, ExecutiveCard with hover reveal (translate-y), 2-col/3-col grid; renders with empty array gate
+- [ ] 04-02-PLAN.md — Process portraits from docs/: user identifies name-to-file mapping, exports WebP 400x400 <100KB into public/images/team/ (human checkpoint)
+- [ ] 04-03-PLAN.md — Populate src/data/team.ts with real executive data; update TeamPreviewSection to render portraits (human checkpoint for data input)
+- [ ] 04-04-PLAN.md — Inject Person JSON-LD schema per executive; validate in Google Rich Results Test (human verify)
+
 **UI hint**: yes
 
 ---
