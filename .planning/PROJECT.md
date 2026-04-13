@@ -27,6 +27,9 @@ O visitante deve entender em segundos quem é a Kolabore, por que confiar, e com
 - ✓ /kolabore — 5 seções: hero, visão, proposta de valor, posicionamento, senioridade — Phase 3
 - ✓ /expertise — 8 áreas expandidas com framing de problema executivo, merge `areaDetails[area.id]` — Phase 3
 - ✓ /engajamento — 8 formatos em profundidade, arranjos customizados, 3 CTAs posicionadas — Phase 3
+- ✓ /executivos — grid 2/3-col, ExecutiveCard com hover CSS-only, 6 retratos WebP <50KB — Phase 4
+- ✓ JSON-LD Person schema por executivo (6 blocos, URLs absolutas) — Phase 4
+- ✓ TeamPreviewSection ativada na homepage com retratos reais — Phase 4
 
 ### Active
 
@@ -104,4 +107,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-04-13 after Phase 3 (Inner Pages) complete*
+*Last updated: 2026-04-13 after Phase 4 (Executivos) complete*
