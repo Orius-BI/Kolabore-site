@@ -138,7 +138,7 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Build /executivos page layout: ExecutivosHeroSection, ExecutiveCard with hover reveal (translate-y), 2-col/3-col grid; renders with empty array gate
+- [x] 04-01-PLAN.md — Build /executivos page layout: ExecutivosHeroSection, ExecutiveCard with hover reveal (translate-y), 2-col/3-col grid; renders with empty array gate
 - [ ] 04-02-PLAN.md — Process portraits from docs/: user identifies name-to-file mapping, exports WebP 400x400 <100KB into public/images/team/ (human checkpoint)
 - [ ] 04-03-PLAN.md — Populate src/data/team.ts with real executive data; update TeamPreviewSection to render portraits (human checkpoint for data input)
 - [ ] 04-04-PLAN.md — Inject Person JSON-LD schema per executive; validate in Google Rich Results Test (human verify)
@@ -188,7 +188,7 @@ Plans:
 | 1. Foundation | 2/5 | Complete    | 2026-04-12 |
 | 2. Homepage | 5/5 | Complete   | 2026-04-12 |
 | 3. Inner Pages | 4/4 | Complete   | 2026-04-13 |
-| 4. Executivos | 0/4 | Not started | - |
+| 4. Executivos | 1/4 | In Progress|  |
 | 5. Contact, SEO & Deploy | 0/5 | Not started | - |
 
 ---
