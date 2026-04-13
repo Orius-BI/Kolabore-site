@@ -6,6 +6,7 @@ import { expertisePage } from '@/content/inner-pages';
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
+import { Button } from '@/components/ui/Button';
 
 export function AreaDeepSection() {
   return (
@@ -55,6 +56,11 @@ export function AreaDeepSection() {
               </m.div>
             );
           })}
+        </div>
+        <div className="mt-16 text-center">
+          <Button variant="secondary" href="/contato">
+            Fale com um especialista
+          </Button>
         </div>
       </Container>
     </Section>
