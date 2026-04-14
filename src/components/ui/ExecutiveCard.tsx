@@ -28,7 +28,7 @@ export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
           alt={exec.name}
           width={400}
           height={400}
-          loading={eager ? 'eager' : 'lazy'}
+          priority={eager}
           className="w-full aspect-square object-cover object-top"
         />
 

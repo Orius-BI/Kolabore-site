@@ -23,13 +23,14 @@ export function TeamPreviewSection() {
           light={true}
         />
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-          {executives.map((exec) => (
+          {executives.map((exec, i) => (
             <div key={exec.id} className="bg-carbon border border-slate/20 rounded-[var(--radius-card)] overflow-hidden">
               <ExportedImage
                 src={exec.photo}
                 alt={exec.name}
                 width={400}
                 height={400}
+                priority={i === 0}
                 className="w-full aspect-square object-cover object-top rounded-t-[var(--radius-card)]"
               />
               <div className="p-3">
