@@ -44,6 +44,17 @@
   --font-display: var(--font-cormorant);
 }
 
+/* ─── Animations ─────────────────────────────────────────────────────────── */
+/* LCP-safe: uses only transform (not opacity) so element is visible from first paint */
+@keyframes hero-slide-up {
+  from { transform: translateY(24px); }
+  to   { transform: translateY(0); }
+}
+
+@utility animate-hero-slide-up {
+  animation: hero-slide-up 0.7s ease-out both;
+}
+
 /* ─── Base styles ────────────────────────────────────────────────────────── */
 body {
   background-color: var(--color-ink);

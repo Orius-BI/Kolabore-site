@@ -1,7 +1,5 @@
-'use client';
-
 // src/components/sections/HeroSection.tsx
-import * as m from 'motion/react-m';
+// Server Component — no 'use client'. CSS animation keeps LCP-safe (no opacity: 0 initial state).
 import { hero } from '@/content/homepage';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
@@ -10,12 +8,7 @@ export function HeroSection() {
   return (
     <div className="min-h-screen bg-ink flex items-center pt-16 lg:pt-20">
       <Container>
-        <m.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="max-w-4xl py-20 lg:py-28"
-        >
+        <div className="max-w-4xl py-20 lg:py-28 animate-hero-slide-up">
           <h1 className="font-display text-display lg:text-[5rem] text-mist leading-tight tracking-tight">
             {hero.headline}
           </h1>
@@ -30,7 +23,7 @@ export function HeroSection() {
               {hero.ctaSecondary}
             </Button>
           </div>
-        </m.div>
+        </div>
       </Container>
     </div>
   );
