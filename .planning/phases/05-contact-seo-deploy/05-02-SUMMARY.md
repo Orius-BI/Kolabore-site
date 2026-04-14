@@ -41,24 +41,24 @@ patterns-established:
   - "Metadata pattern: import type { Metadata } then export const metadata: Metadata = {...}"
   - "openGraph block per page only sets title, description, url — image is inherited via file convention"
 
-requirements-completed: [CONT-02, CONT-05]
+requirements-completed: [CONT-02, CONT-03, CONT-05, CONT-06]
 
 # Metrics
-duration: 3min
-completed: 2026-04-13
+duration: ~10min
+completed: 2026-04-14
 ---
 
 # Phase 05 Plan 02: SEO Metadata Summary
 
-**Unique title/description metadata exports added to all 5 pages plus Organization JSON-LD on homepage via Next.js metadata API**
+**Unique title/description metadata + OG image + Organization JSON-LD added to all pages; heading hierarchy verified as 1 H1 per page**
 
 ## Performance
 
-- **Duration:** ~3 min
+- **Duration:** ~10 min
 - **Started:** 2026-04-13T12:00:00Z
-- **Completed:** 2026-04-13T12:03:00Z
-- **Tasks:** 1 of 2 complete (Task 2 is checkpoint:human-verify — paused)
-- **Files modified:** 5
+- **Completed:** 2026-04-14T00:00:00Z
+- **Tasks:** 2 of 2 complete
+- **Files modified:** 6
 
 ## Accomplishments
 
@@ -72,11 +72,11 @@ completed: 2026-04-13
 ## Task Commits
 
 1. **Task 1: Add metadata exports to all pages + Organization JSON-LD** - `b99933e` (feat)
-
-**Note:** Task 2 (checkpoint:human-verify) requires human to create the 1200x630 OG image and run heading hierarchy audit. No automation commit yet.
+2. **Task 2: OG image verified + heading audit passed** - human-approved checkpoint
 
 ## Files Created/Modified
 
+- `src/app/opengraph-image.jpg` - Created 1200x630 JPG OG image (brand colors, human-created)
 - `src/app/page.tsx` - Added metadata export with absolute title + Organization JSON-LD script in JSX
 - `src/app/kolabore/page.tsx` - Fixed title to 'A Kolabore', added Metadata type, added OG fields
 - `src/app/expertise/page.tsx` - New metadata export: title 'Expertise', description, OG block
@@ -112,11 +112,11 @@ None — all 5 files compiled cleanly, build passes.
 
 ## Next Phase Readiness
 
-- Task 1 complete: all pages have unique title + description metadata (CONT-02 satisfied)
-- Heading hierarchy audit still required (CONT-05 — needs manual verification)
-- OG image still required (CONT-03 — Task 2 gate)
-- trailingSlash: true confirmed in next.config.ts (CONT-06 already satisfied from Phase 1)
+- CONT-02: all pages have unique title + description metadata ✓
+- CONT-03: og:image present in built HTML (verified: `grep -c "og:image" out/index.html` → 1) ✓
+- CONT-05: heading hierarchy verified — 1 H1 per page, no skipped levels ✓
+- CONT-06: trailingSlash: true confirmed in next.config.ts ✓
 
 ---
 *Phase: 05-contact-seo-deploy*
-*Completed: 2026-04-13 (partial — paused at Task 2 checkpoint)*
+*Completed: 2026-04-14*
