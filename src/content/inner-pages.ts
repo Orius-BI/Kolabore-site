@@ -63,7 +63,7 @@ export const kolaborePage = {
       "As boutiques especializadas têm profundidade em uma frente, mas não enxergam os efeitos cruzados entre supply chain, operações e governança. " +
       "A Kolabore combina seniority genuína com breadth de temas e com a disposição de trabalhar do problema ao resultado — sem overhead e sem intermediários.",
     ctaLabel: "Saiba como atuamos",
-    ctaHref: "/engajamento",
+    ctaHref: "/atuacao",
   },
 
   seniority: {

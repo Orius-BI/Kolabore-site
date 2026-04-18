@@ -1,7 +1,6 @@
 'use client';
 
 import * as m from 'motion/react-m';
-import { expertisePage } from '@/content/inner-pages';
 import { Container } from '@/components/layout/Container';
 import { Button } from '@/components/ui/Button';
 
@@ -15,20 +14,30 @@ export function PageHeroSection() {
           transition={{ duration: 0.7, ease: 'easeOut' }}
           className="max-w-4xl"
         >
-          <span className="text-label font-sans uppercase tracking-widest text-gold mb-4 block">
-            {expertisePage.pageHero.eyebrow}
+          <span className="mb-3 block text-label font-sans uppercase tracking-widest text-gold">
+            Expertise Kolabore
           </span>
-          <h1 className="font-display text-h1 lg:text-display text-mist leading-tight tracking-tight">
-            {expertisePage.pageHero.headline}
+          <h1 className="font-display text-display text-mist leading-tight tracking-tight lg:text-[4rem]">
+            Frentes críticas da cadeia de valor tratadas com profundidade real.
           </h1>
-          <p className="mt-6 text-silver text-body lg:text-lg max-w-2xl leading-relaxed">
-            {expertisePage.pageHero.subheadline}
-          </p>
-          <div className="mt-10">
-            <Button variant="primary" href={expertisePage.pageHero.ctaHref}>
-              {expertisePage.pageHero.ctaLabel}
+          <m.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, ease: 'easeOut', delay: 0.2 }}
+            className="mt-6 max-w-2xl text-lg leading-relaxed text-mist/70 lg:text-xl"
+          >
+            Atuação prática em temas que impactam resultado, risco e governança.
+          </m.p>
+          <m.div
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.4 }}
+            className="mt-10"
+          >
+            <Button variant="primary" href="/contato">
+              Converse com a Kolabore
             </Button>
-          </div>
+          </m.div>
         </m.div>
       </Container>
     </div>

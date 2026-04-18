@@ -18,13 +18,13 @@ export function VisionSection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <SectionHeading
-            eyebrow={kolaborePage.vision.eyebrow}
-            title={kolaborePage.vision.title}
+            eyebrow="Visão"
+            title="Negócios relevantes são construídos com decisão boa, integração entre frentes e execução consistente."
             align="left"
             light={false}
           />
           <p className="text-body text-slate max-w-2xl leading-relaxed">
-            {kolaborePage.vision.body}
+            A Kolabore foi estruturada como grupo porque os desafios mais importantes da alta administração atravessam toda a cadeia de valor e raramente cabem em uma única especialidade. Por isso reunimos executivos, gestores e especialistas com experiências complementares, capazes de atuar de forma colaborativa em estratégia, gestão e implementação. Não se trata de vender um pacote pronto, e sim de montar a combinação certa de senioridade para cada contexto.
           </p>
         </m.div>
       </Container>

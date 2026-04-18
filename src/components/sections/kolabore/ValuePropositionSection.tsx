@@ -19,14 +19,35 @@ export function ValuePropositionSection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <SectionHeading
-            eyebrow={kolaborePage.valueProposition.eyebrow}
-            title={kolaborePage.valueProposition.title}
+            eyebrow="Proposta de valor"
+            title="O cliente acessa uma combinacao de senioridade, complementaridade e solucao customizada para o seu desafio."
             align="left"
             light={true}
           />
         </m.div>
         <div className="grid lg:grid-cols-2 gap-6">
-          {kolaborePage.valueProposition.items.map((item, index) => (
+          {[
+            {
+              label: 'Senioridade real',
+              detail:
+                'Os executivos da Kolabore ja lideraram operacoes, supply chain, procurement, qualidade e governanca em empresas de grande porte. Entendem o problema porque ja responderam por ele.',
+            },
+            {
+              label: 'Arranjos customizados',
+              detail:
+                'Cada trabalho parte do desafio real e da cadeia de valor afetada. A equipe, o escopo e o formato sao desenhados em funcao disso, e nao de um portfolio fechado.',
+            },
+            {
+              label: 'Experiencias complementares',
+              detail:
+                'A Kolabore combina frentes complementares de atuacao. Isso permite integrar visoes e sustentar decisoes que atravessam operacoes, fornecedores, governanca, risco e crescimento.',
+            },
+            {
+              label: 'Orientacao a valor',
+              detail:
+                'O trabalho e medido por impacto sobre lucratividade, reducao de riscos, qualidade da execucao e sustentabilidade do crescimento, nao por volume de slides.',
+            },
+          ].map((item, index) => (
             <m.div
               key={item.label}
               initial={{ opacity: 0, y: 20 }}

@@ -19,13 +19,13 @@ export function PositioningSection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <SectionHeading
-            eyebrow={kolaborePage.positioning.eyebrow}
-            title={kolaborePage.positioning.title}
+            eyebrow="Posicionamento"
+            title="Entre a consultoria genérica e a boutique isolada, a Kolabore ocupa o espaço da integração com senioridade."
             align="left"
             light={false}
           />
           <p className="text-body text-slate max-w-2xl leading-relaxed">
-            {kolaborePage.positioning.body}
+            As grandes firmas costumam trazer estrutura pesada e baixa proximidade com quem decide. Boutiques muito especializadas entregam profundidade, mas nem sempre enxergam os efeitos cruzados entre as frentes do negócio. A Kolabore combina senioridade genuína, experiências complementares e disposição para atuar em conjunto, individualmente ou em arranjos customizados. Esse modelo permite apoiar o cliente com mais aderência ao problema, menos overhead e maior capacidade de integração.
           </p>
           <div className="mt-10">
             <Button variant="secondary" href={kolaborePage.positioning.ctaHref}>

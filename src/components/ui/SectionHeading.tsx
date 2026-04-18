@@ -18,7 +18,7 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   const alignClass = align === 'center' ? 'text-center' : 'text-left';
   const titleColor = light ? 'text-mist' : 'text-ink';
-  const subtitleColor = light ? 'text-silver' : 'text-slate';
+  const subtitleColor = light ? 'text-mist/78' : 'text-slate';
 
   return (
     <div className={`mb-12 ${alignClass} ${className}`}>

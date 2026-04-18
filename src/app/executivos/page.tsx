@@ -1,18 +1,16 @@
-// src/app/executivos/page.tsx
 import type { Metadata } from 'next'
 import { Section } from '@/components/layout/Section';
 import { Container } from '@/components/layout/Container';
-import { ExecutivosHeroSection } from '@/components/sections/ExecutivosHeroSection';
 import { ExecutiveCard } from '@/components/ui/ExecutiveCard';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 import { Button } from '@/components/ui/Button';
 import { executives } from '@/data/team';
 
 export const metadata: Metadata = {
-  title: 'Executivos',
+  title: 'Quem somos',
   description: 'Conheça o time da Kolabore: executivos seniores com décadas de atuação em grandes empresas. Supply chain, operações, governança e transformação corporativa.',
   openGraph: {
-    title: 'Executivos | Kolabore',
+    title: 'Quem somos | Kolabore',
     description: 'Conheça o time da Kolabore: executivos seniores com décadas de atuação em grandes empresas. Supply chain, operações, governança e transformação corporativa.',
     url: 'https://kolabore.com.br/executivos/',
   },
@@ -21,8 +19,6 @@ export const metadata: Metadata = {
 export default function ExecutivosPage() {
   return (
     <main>
-      <ExecutivosHeroSection />
-
       <Section id="executivos" className="bg-ink">
         <Container>
           <SectionHeading
@@ -34,10 +30,10 @@ export default function ExecutivosPage() {
 
           {executives.length === 0 ? (
             <div className="py-20 text-center">
-              <p className="text-silver text-small">Perfis em breve.</p>
+              <p className="text-small text-silver">Perfis em breve.</p>
             </div>
           ) : (
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
               {executives.map((exec, i) => (
                 <ExecutiveCard key={exec.id} exec={exec} eager={i === 0} />
               ))}
@@ -46,8 +42,7 @@ export default function ExecutivosPage() {
         </Container>
       </Section>
 
-      {/* CTA section */}
-      <Section className="bg-carbon border-t border-slate/20">
+      <Section className="border-t border-slate/20 bg-carbon">
         <Container>
           <div className="max-w-xl">
             <SectionHeading
@@ -61,7 +56,6 @@ export default function ExecutivosPage() {
         </Container>
       </Section>
 
-      {/* JSON-LD Person schema — one per executive for Google rich results */}
       {executives.map((exec) => (
         <script
           key={`jsonld-${exec.id}`}

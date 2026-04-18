@@ -1,25 +1,23 @@
-// src/components/layout/Footer.tsx
 import Link from "next/link";
 import { Container } from "./Container";
 
 const navLinks = [
   { label: "Kolabore", href: "/kolabore" },
-  { label: "Expertise", href: "/expertise" },
-  { label: "Engajamento", href: "/engajamento" },
-  { label: "Executivos", href: "/executivos" },
+  { label: "Quem somos", href: "/executivos" },
+  { label: "Atuação", href: "/atuacao" },
   { label: "Contato", href: "/contato" },
 ];
 
 export function Footer() {
   return (
-    <footer className="bg-carbon border-t border-slate/30 py-12">
+    <footer className="border-t border-slate/30 bg-carbon py-12">
       <Container>
-        <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+        <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div>
-            <p className="text-mist font-display text-xl font-medium tracking-wide">
+            <p className="font-display text-xl font-medium tracking-wide text-mist">
               Kolabore
             </p>
-            <p className="text-silver text-sm mt-1">
+            <p className="mt-1 text-sm text-silver">
               Consultoria Executiva
             </p>
           </div>
@@ -29,7 +27,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-silver text-sm hover:text-mist transition-colors duration-200"
+                    className="text-sm text-silver transition-colors duration-200 hover:text-mist"
                   >
                     {link.label}
                   </Link>
@@ -38,8 +36,8 @@ export function Footer() {
             </ul>
           </nav>
         </div>
-        <div className="mt-8 pt-8 border-t border-slate/20">
-          <p className="text-silver text-xs">
+        <div className="mt-8 border-t border-slate/20 pt-8">
+          <p className="text-xs text-silver">
             © {new Date().getFullYear()} Kolabore. Todos os direitos reservados.
           </p>
         </div>

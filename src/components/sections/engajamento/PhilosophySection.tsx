@@ -9,7 +9,7 @@ import { Button } from '@/components/ui/Button';
 
 export function PhilosophySection() {
   return (
-    <Section id="philosophy" className="bg-mist">
+    <Section id="philosophy" className="bg-ink pt-0">
       <Container>
         <m.div
           initial={{ opacity: 0, y: 24 }}
@@ -20,9 +20,9 @@ export function PhilosophySection() {
           <SectionHeading
             eyebrow={engajamentoPage.philosophy.eyebrow}
             title={engajamentoPage.philosophy.title}
-            light={false}
+            light={true}
           />
-          <p className="text-slate text-body leading-relaxed max-w-3xl">
+          <p className="max-w-3xl text-body leading-relaxed text-mist/74">
             {engajamentoPage.philosophy.body}
           </p>
           <div className="mt-10">

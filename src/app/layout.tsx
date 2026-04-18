@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import type { Metadata } from "next";
 import { Inter, Cormorant_Garamond } from "next/font/google";
 import { AnimationProvider } from "@/components/providers/AnimationProvider";
@@ -6,9 +5,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import "@/styles/globals.css";
 
-// CRITICAL: variable names here MUST match var() references in globals.css @theme inline block
-// globals.css: --font-sans: var(--font-inter)  ← must match variable: "--font-inter"
-// globals.css: --font-display: var(--font-cormorant)  ← must match variable: "--font-cormorant"
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
@@ -30,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Kolabore",
   },
   description:
-    "Consultoria executiva de alto valor para líderes e organizações. Senioridade aplicada a desafios críticos de operação, supply chain, governança e crescimento.",
+    "Consultoria executiva de alto valor para lideres e organizacoes. Senioridade aplicada a desafios criticos de operacao, supply chain, governanca e crescimento.",
   openGraph: {
     type: "website",
     locale: "pt_BR",
@@ -45,11 +41,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="pt-BR"
-      className={`${inter.variable} ${cormorant.variable}`}
-    >
-      <body className="font-sans bg-ink text-mist antialiased">
+    <html lang="pt-BR" className={`${inter.variable} ${cormorant.variable}`}>
+      <body className="bg-ink font-sans text-mist antialiased">
         <AnimationProvider>
           <Header />
           <main>{children}</main>

@@ -1,61 +1,85 @@
-// src/components/layout/Header.tsx
-// 'use client' is required — uses useState and addEventListener for scroll detection
 "use client";
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 import Link from "next/link";
 import { Container } from "./Container";
 
 const navLinks = [
   { label: "Kolabore", href: "/kolabore" },
-  { label: "Expertise", href: "/expertise" },
-  { label: "Engajamento", href: "/engajamento" },
-  { label: "Executivos", href: "/executivos" },
+  { label: "Quem somos", href: "/executivos" },
+  { label: "Atuação", href: "/atuacao" },
   { label: "Contato", href: "/contato" },
 ];
 
 export function Header() {
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 60);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header
-      className={`fixed top-0 inset-x-0 z-50 transition-colors duration-300 ${
-        scrolled
-          ? "bg-ink/95 backdrop-blur-sm border-b border-slate/30"
-          : "bg-transparent"
-      }`}
-    >
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-slate/30 bg-ink/95 backdrop-blur-sm">
       <Container>
-        <div className="flex items-center justify-between h-16 lg:h-20">
+        <div className="flex h-16 items-center justify-between lg:h-20">
           <Link
             href="/"
-            className="text-mist font-display text-lg font-medium tracking-wide hover:text-gold transition-colors duration-200"
+            className="font-display text-3xl font-medium tracking-wide text-mist transition-colors duration-200 hover:text-gold md:text-4xl lg:text-5xl"
+            onClick={() => setIsOpen(false)}
           >
             Kolabore
           </Link>
-          <nav className="hidden md:flex items-center gap-8" aria-label="Principal">
+
+          <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-silver text-sm hover:text-mist transition-colors duration-200"
+                className="text-sm text-silver transition-colors duration-200 hover:text-mist"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
+
           <Link
             href="/contato"
-            className="hidden md:inline-flex items-center px-4 py-2 text-sm font-medium text-ink bg-gold hover:bg-gold-hover transition-colors duration-200 rounded-[var(--radius-button)]"
+            className="hidden items-center rounded-[var(--radius-button)] bg-gold px-4 py-2 text-sm font-medium text-ink transition-colors duration-200 hover:bg-gold-hover md:inline-flex"
           >
             Converse com a Kolabore
           </Link>
+
+          <button
+            type="button"
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+            aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-mist transition-colors duration-200 hover:border-white/20 hover:text-gold md:hidden"
+            onClick={() => setIsOpen((open) => !open)}
+          >
+            <span className="text-lg leading-none">{isOpen ? "×" : "☰"}</span>
+          </button>
         </div>
+
+        {isOpen && (
+          <div id="mobile-menu" className="border-t border-slate/20 py-4 md:hidden">
+            <nav className="flex flex-col gap-2" aria-label="Principal mobile">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setIsOpen(false)}
+                  className="rounded-md px-2 py-3 text-base text-silver transition-colors duration-200 hover:bg-white/5 hover:text-mist"
+                >
+                  {link.label}
+                </Link>
+              ))}
+              <Link
+                href="/contato"
+                onClick={() => setIsOpen(false)}
+                className="mt-2 inline-flex items-center justify-center rounded-[var(--radius-button)] bg-gold px-4 py-3 text-sm font-medium text-ink transition-colors duration-200 hover:bg-gold-hover"
+              >
+                Converse com a Kolabore
+              </Link>
+            </nav>
+          </div>
+        )}
       </Container>
     </header>
   );
