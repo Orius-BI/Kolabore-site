@@ -75,7 +75,7 @@ export function AtuacaoSummarySection() {
 
         <div className="mt-10">
           <Button variant="ghost" href="/contato">
-            Queremos conhecer sua história
+            Conte-nos sua história
           </Button>
         </div>
       </Container>
