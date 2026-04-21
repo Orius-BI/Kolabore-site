@@ -26,7 +26,7 @@ export function ExpertiseIntroSection() {
             A Kolabore atua de forma transversal ao longo da cadeia de valor, conectando operação, supply chain, procurement, governança, qualidade, projetos e inovação. O objetivo é apoiar a alta administração em aumento de lucratividade, redução de riscos e crescimento sustentável, com visão integrada sobre o negócio.
           </p>
           <div className="mt-8">
-            <Button variant="secondary" href={expertisePage.ctaBanner.ctaHref}>
+            <Button variant="secondaryLight" href={expertisePage.ctaBanner.ctaHref}>
               {expertisePage.ctaBanner.ctaLabel}
             </Button>
           </div>

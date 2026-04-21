@@ -51,7 +51,7 @@ export function TeamPreviewSection() {
               <Button
                 variant="secondary"
                 href="/executivos"
-                className="border-[#2149a2] text-[#2149a2] hover:bg-white/18"
+                className="border-[#2149a2] text-[#2149a2] hover:border-[#2149a2] hover:bg-[#2149a2] hover:text-white"
               >
                 Conheça o time completo
               </Button>

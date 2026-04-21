@@ -24,7 +24,7 @@ export default function ExecutivosPage() {
           <SectionHeading
             eyebrow="Quem somos"
             title="Nosso time executivo"
-            subtitle="Profissionais com trajetórias em grandes empresas, atuando de perto nos desafios que mais importam para a alta gestão."
+            subtitle="Profissionais com trajetória em grandes organizações, atuando diretamente em temas críticos para a alta gestão."
             light={true}
           />
 

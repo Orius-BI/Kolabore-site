@@ -7,26 +7,11 @@ import { Container } from '@/components/layout/Container';
 import { SectionHeading } from '@/components/ui/SectionHeading';
 
 const formats = [
-  {
-    title: 'Consultoria completa',
-    detail: 'Atuação ponta a ponta em desafios estruturais, com presença contínua e foco em implementação.',
-  },
-  {
-    title: 'Assessments e benchmarks',
-    detail: 'Diagnóstico, priorização e clareza executiva sobre onde agir primeiro.',
-  },
-  {
-    title: 'Quick wins',
-    detail: 'Intervenções focadas em capturar resultado no curto prazo, sem perder sustentação.',
-  },
-  {
-    title: 'Workshops e mentoria',
-    detail: 'Apoio sênior para alinhamento, desenvolvimento e tomada de decisão.',
-  },
-  {
-    title: 'Arranjos customizados',
-    detail: 'Combinações desenhadas conforme escopo, momento e complexidade do contexto.',
-  },
+  { title: 'Consultoria completa', detail: 'Atuação ponta a ponta com foco em implementação.' },
+  { title: 'Assessments e benchmarks', detail: 'Diagnóstico e priorização.' },
+  { title: 'Quick wins', detail: 'Captura de resultado no curto prazo.' },
+  { title: 'Workshops e mentoria', detail: 'Apoio à tomada de decisão.' },
+  { title: 'Arranjos customizados', detail: 'Modelos definidos conforme o contexto.' },
 ];
 
 export function FormatsDeepSection() {
@@ -61,12 +46,8 @@ export function FormatsDeepSection() {
                   onClick={() => setOpenTitle(isOpen ? null : format.title)}
                   aria-expanded={isOpen}
                 >
-                  <h3 className="font-display text-[1.5rem] leading-tight text-mist">
-                    {format.title}
-                  </h3>
-                  <span className="shrink-0 text-xl leading-none text-gold">
-                    {isOpen ? '−' : '+'}
-                  </span>
+                  <h3 className="font-display text-[1.5rem] leading-tight text-mist">{format.title}</h3>
+                  <span className="shrink-0 text-xl leading-none text-gold">{isOpen ? '−' : '+'}</span>
                 </button>
 
                 {isOpen && (
@@ -76,9 +57,7 @@ export function FormatsDeepSection() {
                 )}
 
                 <div className="hidden gap-3 py-8 md:grid md:grid-cols-[220px_minmax(0,1fr)] md:gap-6 lg:grid-cols-[260px_minmax(0,1fr)] lg:gap-8">
-                  <h3 className="font-display text-[1.65rem] leading-tight text-mist md:text-h3">
-                    {format.title}
-                  </h3>
+                  <h3 className="font-display text-[1.65rem] leading-tight text-mist md:text-h3">{format.title}</h3>
                   <p className="max-w-2xl text-body leading-relaxed text-mist/72">{format.detail}</p>
                 </div>
               </m.div>

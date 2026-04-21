@@ -1,8 +1,7 @@
-// src/components/ui/Button.tsx
 import Link from 'next/link';
 
 interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'ghost';
+  variant?: 'primary' | 'secondary' | 'secondaryLight' | 'ghost' | 'ghostLight';
   size?: 'sm' | 'md';
   href?: string;
   className?: string;
@@ -16,9 +15,13 @@ const variantClasses = {
   primary:
     'bg-gold text-ink hover:bg-gold-hover transition-colors duration-200',
   secondary:
-    'border border-gold text-gold bg-transparent hover:bg-gold/10 transition-colors duration-200',
+    'border border-gold text-gold bg-transparent hover:bg-gold hover:text-ink transition-colors duration-200',
+  secondaryLight:
+    'border border-gold text-gold bg-transparent hover:border-ink hover:bg-ink hover:text-mist transition-colors duration-200',
   ghost:
-    'text-silver hover:text-mist border border-slate/40 hover:border-slate/70 transition-colors duration-200',
+    'border border-slate/40 bg-transparent text-silver hover:border-slate/70 hover:bg-white/8 hover:text-mist transition-colors duration-200',
+  ghostLight:
+    'border border-slate/20 bg-white text-slate hover:border-ink hover:bg-ink hover:text-mist transition-colors duration-200',
 } as const;
 
 const sizeClasses = {
@@ -27,7 +30,7 @@ const sizeClasses = {
 } as const;
 
 const sharedClasses =
-  'inline-flex items-center justify-center font-medium rounded-[var(--radius-button)] disabled:opacity-50 disabled:cursor-not-allowed';
+  'inline-flex items-center justify-center text-center font-medium rounded-[var(--radius-button)] disabled:opacity-50 disabled:cursor-not-allowed';
 
 export function Button({
   variant = 'primary',

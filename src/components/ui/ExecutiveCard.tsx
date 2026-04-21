@@ -42,8 +42,9 @@ export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true }}
+      className="h-full"
     >
-      <div className="group rounded-[var(--radius-card)] border border-slate/20 bg-carbon p-5 sm:p-6">
+      <div className="group flex h-full flex-col rounded-[var(--radius-card)] border border-slate/20 bg-carbon p-5 sm:p-6">
         <div className="mx-auto mb-5 h-36 w-36 overflow-hidden rounded-full border border-white/10 shadow-[0_18px_40px_rgba(0,0,0,0.28)] sm:h-40 sm:w-40">
           <ExportedImage
             src={exec.photo}
@@ -55,12 +56,14 @@ export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
           />
         </div>
 
-        <div className="pb-2 text-center">
+        <div className="text-center">
           <p className="text-body font-sans font-semibold text-mist">{exec.name}</p>
           <p className="mt-1 text-small text-silver">{exec.title}</p>
+        </div>
 
-          {cardLogos.length > 0 && (
-            <div className="mt-3 flex items-center justify-center gap-2">
+        <div className="mt-3 flex min-h-10 items-center justify-center gap-2">
+          {cardLogos.length > 0 ? (
+            <>
               <span className="h-px w-4 bg-slate/15" />
               <div className={`flex min-h-7 items-center justify-center ${isMultiLogo ? 'gap-2.5' : 'gap-0'}`}>
                 {cardLogos.map((logo) => (
@@ -73,44 +76,40 @@ export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
                 ))}
               </div>
               <span className="h-px w-4 bg-slate/15" />
+            </>
+          ) : (
+            <div className="h-7" />
+          )}
+        </div>
+
+        <div className="mt-3 min-h-[72px]">
+          {visibleTags.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-2">
+              {visibleTags.map((tag) => (
+                <span key={tag} className="rounded-sm bg-slate/40 px-2 py-1 text-label text-silver">
+                  {tag}
+                </span>
+              ))}
             </div>
           )}
         </div>
 
-        <div className="grid grid-rows-[1fr] transition-[grid-template-rows] duration-300 group-hover:grid-rows-[0fr]">
-          <div className="overflow-hidden">
-            <div className="pb-4">
-              {visibleTags.length > 0 && (
-                <div className="flex flex-wrap justify-center gap-2">
-                  {visibleTags.map((tag) => (
-                    <span key={tag} className="rounded-sm bg-slate/40 px-2 py-1 text-label text-silver">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
-              <p className="mt-4 border-t border-slate/20 pt-4 text-small italic text-silver/70">
-                {exec.credential}
-              </p>
-            </div>
-          </div>
+        <div className="mt-4 border-t border-slate/20 pt-4">
+          <p className="min-h-[96px] text-small italic leading-relaxed text-silver/70">
+            {exec.credential}
+          </p>
         </div>
 
-        <div className="grid grid-rows-[0fr] transition-[grid-template-rows] duration-300 group-hover:grid-rows-[1fr]">
-          <div className="overflow-hidden">
-            <div className="pb-4">
-              <p className="text-small leading-relaxed text-silver">{exec.bio}</p>
-              {extraTags.length > 0 && (
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {extraTags.map((tag) => (
-                    <span key={tag} className="rounded-sm bg-slate/40 px-2 py-1 text-label text-silver">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              )}
+        <div className="mt-auto pt-4">
+          {extraTags.length > 0 && (
+            <div className="flex flex-wrap gap-2">
+              {extraTags.map((tag) => (
+                <span key={tag} className="rounded-sm bg-slate/40 px-2 py-1 text-label text-silver">
+                  {tag}
+                </span>
+              ))}
             </div>
-          </div>
+          )}
         </div>
       </div>
     </m.div>

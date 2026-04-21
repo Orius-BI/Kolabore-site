@@ -6,11 +6,11 @@ import { Container } from '@/components/layout/Container';
 export const metadata: Metadata = {
   title: 'Contato',
   description:
-    'Entre em contato com a Kolabore. Fale diretamente com consultores executivos seniores — sem intermediários, sem formulários genéricos.',
+    'Entre em contato com a Kolabore. Fale diretamente com consultores executivos seniores, sem intermediários.',
   openGraph: {
     title: 'Contato | Kolabore',
     description:
-      'Entre em contato com a Kolabore. Fale diretamente com consultores executivos seniores — sem intermediários, sem formulários genéricos.',
+      'Entre em contato com a Kolabore. Fale diretamente com consultores executivos seniores, sem intermediários.',
     url: 'https://kolabore.com.br/contato',
   },
 };
@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 export default function ContatoPage() {
   return (
     <main>
-      {/* Hero */}
       <div className="bg-ink pt-32 pb-16 lg:pt-40 lg:pb-20">
         <Container>
           <span className="text-gold text-label uppercase tracking-widest">
@@ -34,10 +33,8 @@ export default function ContatoPage() {
         </Container>
       </div>
 
-      {/* Form — ContactSection manages its own Section wrapper */}
       <ContactSection />
 
-      {/* Contact details */}
       <Section className="bg-carbon border-t border-slate/20">
         <Container>
           <div className="max-w-sm">
@@ -50,7 +47,6 @@ export default function ContatoPage() {
               Telefone
             </p>
             <p className="text-mist">
-              {/* TODO: confirm real phone with client */}
               +55 (11) 9XXXX-XXXX
             </p>
             <p className="text-silver text-small mt-6">

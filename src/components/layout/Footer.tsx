@@ -4,7 +4,6 @@ import { Container } from "./Container";
 const navLinks = [
   { label: "Kolabore", href: "/kolabore" },
   { label: "Quem somos", href: "/executivos" },
-  { label: "Atuação", href: "/atuacao" },
   { label: "Contato", href: "/contato" },
 ];
 
@@ -13,13 +12,13 @@ export function Footer() {
     <footer className="border-t border-slate/30 bg-carbon py-12">
       <Container>
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
-          <div>
-            <p className="font-display text-xl font-medium tracking-wide text-mist">
-              Kolabore
-            </p>
-            <p className="mt-1 text-sm text-silver">
-              Consultoria Executiva
-            </p>
+          <div className="w-full max-w-[320px] md:max-w-[380px]">
+            <img
+              src="/images/logo-kolabore-group.png"
+              alt="Kolabore Group"
+              className="h-[3.6rem] w-full max-w-[336px] object-contain object-left sm:h-[4.2rem] sm:max-w-[408px]"
+            />
+            <p className="mt-2 text-sm text-silver">Consultoria Executiva</p>
           </div>
           <nav aria-label="Rodapé">
             <ul className="flex flex-wrap gap-6">

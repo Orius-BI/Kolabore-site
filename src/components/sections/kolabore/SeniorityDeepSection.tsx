@@ -1,6 +1,5 @@
 'use client';
 
-// src/components/sections/kolabore/SeniorityDeepSection.tsx
 import * as m from 'motion/react-m';
 import { kolaborePage } from '@/content/inner-pages';
 import { Section } from '@/components/layout/Section';
@@ -19,14 +18,12 @@ export function SeniorityDeepSection() {
           transition={{ duration: 0.6, ease: 'easeOut' }}
         >
           <SectionHeading
-            eyebrow={kolaborePage.seniority.eyebrow}
-            title={kolaborePage.seniority.title}
+            eyebrow="Quem somos"
+            title="Experiência construída na prática, com responsabilidade de resultado."
+            subtitle="A Kolabore é formada por executivos que já conduziram decisões relevantes em grandes organizações e hoje atuam de forma complementar."
             align="left"
             light={true}
           />
-          <p className="text-body text-silver max-w-2xl leading-relaxed">
-            {kolaborePage.seniority.body}
-          </p>
           <div className="mt-10">
             <Button variant="ghost" href={kolaborePage.seniority.ctaHref}>
               {kolaborePage.seniority.ctaLabel}

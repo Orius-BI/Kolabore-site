@@ -7,7 +7,6 @@ import { Container } from "./Container";
 const navLinks = [
   { label: "Kolabore", href: "/kolabore" },
   { label: "Quem somos", href: "/executivos" },
-  { label: "Atuação", href: "/atuacao" },
   { label: "Contato", href: "/contato" },
 ];
 
@@ -17,13 +16,18 @@ export function Header() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-slate/30 bg-ink/95 backdrop-blur-sm">
       <Container>
-        <div className="flex h-16 items-center justify-between lg:h-20">
+        <div className="flex h-20 items-center justify-between gap-3 lg:h-20">
           <Link
             href="/"
-            className="font-display text-3xl font-medium tracking-wide text-mist transition-colors duration-200 hover:text-gold md:text-4xl lg:text-5xl"
+            className="flex min-w-0 flex-1 items-center md:flex-none"
             onClick={() => setIsOpen(false)}
+            aria-label="Kolabore"
           >
-            Kolabore
+            <img
+              src="/images/logo-kolabore-group.png"
+              alt="Kolabore Group"
+              className="h-16 w-full max-w-[320px] object-contain object-left sm:h-[4.4rem] sm:max-w-[380px] md:h-[3.6rem] md:max-w-[408px] lg:h-[4.2rem] lg:max-w-[504px]"
+            />
           </Link>
 
           <nav className="hidden items-center gap-8 md:flex" aria-label="Principal">
@@ -50,7 +54,7 @@ export function Header() {
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
             aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-white/10 text-mist transition-colors duration-200 hover:border-white/20 hover:text-gold md:hidden"
+            className="ml-2 inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-md border border-white/10 text-mist transition-colors duration-200 hover:border-white/20 hover:text-gold md:hidden"
             onClick={() => setIsOpen((open) => !open)}
           >
             <span className="text-lg leading-none">{isOpen ? "×" : "☰"}</span>

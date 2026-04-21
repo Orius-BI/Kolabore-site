@@ -1,7 +1,3 @@
-// src/app/sitemap.ts
-// IMPORTANT: `export const dynamic = 'force-static'` is REQUIRED for output: 'export'.
-// Without it, Next.js silently skips this file and out/sitemap.xml is never generated.
-// See: https://github.com/vercel/next.js/issues/68667
 import type { MetadataRoute } from 'next'
 
 export const dynamic = 'force-static'
@@ -18,12 +14,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${base}/kolabore/`,
-      lastModified: lastMod,
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${base}/atuacao/`,
       lastModified: lastMod,
       changeFrequency: 'monthly',
       priority: 0.8,
