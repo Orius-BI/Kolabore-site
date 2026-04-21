@@ -14,9 +14,9 @@ export function Footer() {
         <div className="flex flex-col items-start justify-between gap-8 md:flex-row md:items-center">
           <div className="w-full max-w-[320px] md:max-w-[380px]">
             <img
-              src="/images/logo-kolabore-group.png"
+              src="/images/logo-kolabore-group-v2.png"
               alt="Kolabore Group"
-              className="h-[3.6rem] w-full max-w-[336px] object-contain object-left sm:h-[4.2rem] sm:max-w-[408px]"
+              className="h-[5.1rem] w-full max-w-[520px] object-contain object-left sm:h-[6rem] sm:max-w-[680px]"
             />
             <p className="mt-2 text-sm text-silver">Consultoria Executiva</p>
           </div>

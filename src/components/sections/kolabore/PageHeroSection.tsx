@@ -54,7 +54,7 @@ export function PageHeroSection() {
               href="/executivos"
               className="w-full border-white/20 bg-black/32 text-white hover:border-white/30 hover:bg-white/10 hover:text-white sm:w-auto"
             >
-              Conhecer equipe
+              Conheça a equipe
             </Button>
           </m.div>
         </m.div>

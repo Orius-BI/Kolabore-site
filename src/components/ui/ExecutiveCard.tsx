@@ -12,7 +12,7 @@ interface ExecutiveCardProps {
 const credentialLogos: Record<string, Array<{ src: string; alt: string }>> = {
   'alexandre-guedes': [{ src: '/images/logos/pg.png', alt: 'P&G' }],
   'eduardo-araujo': [{ src: '/images/logos/raizen.png', alt: 'Raízen' }],
-  'leonardo-moreira': [{ src: '/images/logos/generic-logo.png', alt: 'Eneva' }],
+  'leonardo-moreira': [{ src: '/images/logos/accenture.png', alt: 'Accenture' }],
   'mario-sergio-gomes': [
     { src: '/images/logos/coca-cola.png', alt: 'Coca-Cola' },
     { src: '/images/logos/pg.png', alt: 'P&G' },
@@ -21,13 +21,10 @@ const credentialLogos: Record<string, Array<{ src: string; alt: string }>> = {
   'rino-abbondi': [{ src: '/images/logos/coca-cola.png', alt: 'Coca-Cola' }],
 };
 
-const logoClasses: Record<string, string> = {
-  'alexandre-guedes': 'max-h-8',
-  'eduardo-araujo': 'max-h-6',
-  'leonardo-moreira': 'max-h-7 opacity-85',
-  'mario-sergio-gomes': 'max-h-5',
-  'paulo-villas': 'max-h-5 brightness-0 invert opacity-85',
-  'rino-abbondi': 'max-h-5',
+// Some logos are too dark on the site's background; treat only those.
+const logoToneClasses: Record<string, string> = {
+  'paulo-villas': 'brightness-0 invert opacity-85',
+  'leonardo-moreira': 'brightness-0 invert opacity-85',
 };
 
 export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
@@ -65,20 +62,30 @@ export function ExecutiveCard({ exec, eager = false }: ExecutiveCardProps) {
           {cardLogos.length > 0 ? (
             <>
               <span className="h-px w-4 bg-slate/15" />
-              <div className={`flex min-h-7 items-center justify-center ${isMultiLogo ? 'gap-2.5' : 'gap-0'}`}>
+              <div
+                className={[
+                  'flex min-h-8 items-center justify-center',
+                  isMultiLogo ? 'gap-2.5' : 'gap-0',
+                ].join(' ')}
+              >
                 {cardLogos.map((logo) => (
                   <img
                     key={logo.alt}
                     src={logo.src}
                     alt={logo.alt}
-                    className={`w-auto object-contain ${isMultiLogo ? 'max-w-[52px]' : 'max-w-[92px]'} ${logoClasses[exec.id] ?? 'max-h-6 opacity-90'}`}
+                    className={[
+                      // Standardize logo presence across cards.
+                      'h-7 w-auto object-contain opacity-90 sm:h-8',
+                      isMultiLogo ? 'max-w-[64px]' : 'max-w-[112px]',
+                      logoToneClasses[exec.id] ?? '',
+                    ].join(' ')}
                   />
                 ))}
               </div>
               <span className="h-px w-4 bg-slate/15" />
             </>
           ) : (
-            <div className="h-7" />
+            <div className="h-8" />
           )}
         </div>
 
