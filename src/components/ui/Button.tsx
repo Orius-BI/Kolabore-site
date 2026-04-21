@@ -13,7 +13,7 @@ interface ButtonProps {
 
 const variantClasses = {
   primary:
-    'bg-gold text-ink hover:bg-gold-hover transition-colors duration-200',
+    'bg-gold text-white hover:bg-gold-hover transition-colors duration-200',
   secondary:
     'border border-gold text-gold bg-transparent hover:bg-gold hover:text-ink transition-colors duration-200',
   secondaryLight:

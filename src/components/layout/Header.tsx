@@ -39,7 +39,7 @@ export function Header() {
 
           <Link
             href="/contato"
-            className="hidden items-center rounded-[var(--radius-button)] bg-gold px-4 py-2 text-sm font-medium text-mist transition-colors duration-200 hover:bg-gold-hover md:inline-flex"
+            className="hidden items-center rounded-[var(--radius-button)] bg-gold px-4 py-2 text-sm font-medium text-white transition-colors duration-200 hover:bg-gold-hover md:inline-flex"
           >
             Converse com a Kolabore
           </Link>
