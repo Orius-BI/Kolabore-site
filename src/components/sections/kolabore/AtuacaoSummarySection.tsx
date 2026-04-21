@@ -35,7 +35,7 @@ const areas = [
   {
     title: 'Projetos e Transformação',
     description:
-      'PMO sênior, reestruturações, integrações e programas críticos com foco em entrega efetiva.',
+      'PMO sênior, reestruturações, integrações e programas relevantes com foco em entrega efetiva.',
   },
 ];
 
@@ -51,7 +51,7 @@ export function AtuacaoSummarySection() {
         >
           <SectionHeading
             eyebrow="Onde atuamos"
-            title="Frentes relevantes tratadas com senioridade, profundidade prática e visão integrada."
+            title="Frentes de negócio que transformamos"
             subtitle="A Kolabore atua em temas que afetam resultado, risco, governança e capacidade de execução."
             light={true}
           />
